@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "nk 8/13/2003 13:14",
+	"super" : "QHsm",
+	"category" : "FSM-Morphic",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"morph",
+		"handlers",
+		"handled",
+		"event",
+		"firstClickDown",
+		"eventQueue",
+		"idleHistory"
+	],
+	"name" : "QHsmMorphicEventHandler",
+	"type" : "normal"
+}
