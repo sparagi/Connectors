@@ -1,0 +1,25 @@
+{
+	"commentStamp" : "nk 7/24/2003 15:15",
+	"super" : "Morph",
+	"category" : "BroomMorphs-Base",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"BroomIcon"
+	],
+	"instvars" : [
+		"centered",
+		"drawBroomIcon",
+		"filter",
+		"hotspot",
+		"lastHotspot",
+		"moved",
+		"span",
+		"start",
+		"transient",
+		"unmoved",
+		"width"
+	],
+	"name" : "BroomMorph",
+	"type" : "normal"
+}

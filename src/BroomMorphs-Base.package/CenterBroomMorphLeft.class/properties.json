@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "BroomMorphLeft",
+	"category" : "BroomMorphs-Base",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CenterBroomMorphLeft",
+	"type" : "normal"
+}
