@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "NCGraphLayoutAlgorithm",
+	"category" : "ConnectorsGraphLayout",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"temperature",
+		"initialTemperature",
+		"endTemperature",
+		"lambda"
+	],
+	"name" : "NCSimulatedAnnealingGraphLayoutAlgorithm",
+	"type" : "normal"
+}

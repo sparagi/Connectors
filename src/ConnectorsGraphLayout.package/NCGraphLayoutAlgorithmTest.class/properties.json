@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "ConnectorsGraphLayout",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"mainWindowMorph"
+	],
+	"name" : "NCGraphLayoutAlgorithmTest",
+	"type" : "normal"
+}
