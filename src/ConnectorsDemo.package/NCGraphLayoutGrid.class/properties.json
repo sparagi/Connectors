@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "ConnectorsDemo",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"contents",
+		"width",
+		"height"
+	],
+	"name" : "NCGraphLayoutGrid",
+	"type" : "normal"
+}

@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "nk 7/17/2004 12:19",
+	"super" : "Object",
+	"category" : "ConnectorsDemo",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"pasteUp",
+		"classMorphs",
+		"layoutBox",
+		"random",
+		"topClass",
+		"connections"
+	],
+	"name" : "NCClassHierarchyDiagrammer",
+	"type" : "normal"
+}
