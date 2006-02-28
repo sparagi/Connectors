@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "BorderedMorph",
+	"category" : "ConnectorsShapes",
+	"classinstvars" : [
+		"prototype"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"graphModel"
+	],
+	"name" : "NCBasicShapeMorph",
+	"type" : "normal"
+}

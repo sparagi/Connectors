@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "NCEllipseMorph",
+	"category" : "ConnectorsShapes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "NCCircleMorph",
+	"type" : "normal"
+}

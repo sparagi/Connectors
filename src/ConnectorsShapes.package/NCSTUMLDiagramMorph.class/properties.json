@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "NCUMLDiagramMorph",
+	"category" : "ConnectorsShapes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"className"
+	],
+	"name" : "NCSTUMLDiagramMorph",
+	"type" : "normal"
+}
