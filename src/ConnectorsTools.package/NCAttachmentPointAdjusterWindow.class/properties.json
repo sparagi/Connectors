@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "PasteUpMorph",
+	"category" : "ConnectorsTools",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"joystick",
+		"originalPosition",
+		"target"
+	],
+	"name" : "NCAttachmentPointAdjusterWindow",
+	"type" : "normal"
+}

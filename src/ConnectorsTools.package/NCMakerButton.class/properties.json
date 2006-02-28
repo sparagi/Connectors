@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "IconicButton",
+	"category" : "ConnectorsTools",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"triggerEventType"
+	],
+	"name" : "NCMakerButton",
+	"type" : "normal"
+}
