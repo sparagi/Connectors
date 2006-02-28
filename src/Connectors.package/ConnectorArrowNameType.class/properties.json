@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SymbolListType",
+	"category" : "Connectors-EToys",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ConnectorArrowNameType",
+	"type" : "normal"
+}

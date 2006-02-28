@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "tk 12/1/2004 15:29",
+	"super" : "NCOffsetConstraintMorph",
+	"category" : "Connectors-Text-Base",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"label"
+	],
+	"name" : "NCLabelMorph",
+	"type" : "normal"
+}

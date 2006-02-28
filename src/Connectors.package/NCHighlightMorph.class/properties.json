@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "Morph",
+	"category" : "Connectors-Base",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "NCHighlightMorph",
+	"type" : "normal"
+}

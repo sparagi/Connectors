@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "NCCurve",
+	"category" : "Connectors-Lines and Curves",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"originalFirstContour"
+	],
+	"name" : "NCLineArrowGlyph",
+	"type" : "normal"
+}

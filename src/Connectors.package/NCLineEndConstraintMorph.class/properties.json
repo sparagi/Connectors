@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "NCConstraintMorph",
+	"category" : "Connectors-Base",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"firstVertex",
+		"lineAttachmentPoint"
+	],
+	"name" : "NCLineEndConstraintMorph",
+	"type" : "normal"
+}

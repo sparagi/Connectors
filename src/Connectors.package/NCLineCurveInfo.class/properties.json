@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Connectors-Lines and Curves",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"line",
+		"targetPoint",
+		"segmentIndex",
+		"closestPoint",
+		"minDist",
+		"minT"
+	],
+	"name" : "NCLineCurveInfo",
+	"type" : "normal"
+}

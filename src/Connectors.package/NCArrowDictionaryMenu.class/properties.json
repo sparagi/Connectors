@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GraphicalDictionaryMenu",
+	"category" : "Connectors-Tools",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "NCArrowDictionaryMenu",
+	"type" : "normal"
+}

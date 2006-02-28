@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GenericPropertiesMorph",
+	"category" : "Connectors-Tools",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ConnectorPropertiesMorph",
+	"type" : "normal"
+}

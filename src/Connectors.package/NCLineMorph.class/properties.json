@@ -1,0 +1,24 @@
+{
+	"commentStamp" : "",
+	"super" : "BorderedMorph",
+	"category" : "Connectors-Lines and Curves",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"CurveDebug"
+	],
+	"instvars" : [
+		"lineWidth",
+		"fillStyle",
+		"smoothCurve",
+		"vertices",
+		"segments",
+		"contours",
+		"arrows",
+		"arrowForms",
+		"arrowScales",
+		"arrowJoints"
+	],
+	"name" : "NCLineMorph",
+	"type" : "normal"
+}
