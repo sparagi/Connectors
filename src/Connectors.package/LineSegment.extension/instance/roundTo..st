@@ -1,4 +1,4 @@
 *connectors-intersection
 roundTo: quantum
-	start _ start roundTo: quantum.
-	end _ end roundTo: quantum.
+	start := start roundTo: quantum.
+	end := end roundTo: quantum.

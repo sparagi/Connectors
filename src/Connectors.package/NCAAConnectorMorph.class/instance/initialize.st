@@ -2,8 +2,8 @@ initialization
 initialize
 	super initialize.
 	super color: Color transparent.
-	line _ self class defaultLineClass vertices: { 0@0 . 50@0 } color: Color blue borderWidth: 2 borderColor: Color black.
-	constraints _ Array new: 2.
+	line := self class defaultLineClass vertices: { 0@0 . 50@0 } color: Color blue borderWidth: 2 borderColor: Color black.
+	constraints := Array new: 2.
 	constraints at: 1 put: ((self class defaultLineEndConstraintClass  new line: line firstVertex: true otherMorph: nil)
 		center: 0@0;
 		lastTargetPoint: 0@0;

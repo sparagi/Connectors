@@ -1,5 +1,5 @@
 arrows
 clearArrowDictionary
-	ArrowGlyphs ifNil: [ ^ArrowGlyphs _ Dictionary new ].
+	ArrowGlyphs ifNil: [ ^ArrowGlyphs := Dictionary new ].
 	ArrowGlyphs keysAndValuesRemove: [ :k :v | true ];
 		changed: #arrowsChanged.

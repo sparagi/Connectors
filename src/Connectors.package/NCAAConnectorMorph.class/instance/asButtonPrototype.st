@@ -1,9 +1,9 @@
 dropping/grabbing
 asButtonPrototype
 	| logger proto |
-	logger _ self valueOfProperty: #logger ifAbsent: [].
+	logger := self valueOfProperty: #logger ifAbsent: [].
 	self removeProperty: #logger.
-	proto _ super asButtonPrototype
+	proto := super asButtonPrototype
 		removeProperty: #suspendedEventHandler;
 		detach;
 		straighten;

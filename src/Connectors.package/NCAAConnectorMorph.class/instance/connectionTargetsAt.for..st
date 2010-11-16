@@ -3,12 +3,12 @@ connectionTargetsAt: localPoint for: constraint
 	"Answer a collection of prospective connection targets.
 	Search up to the first playfield."
 	| targets globalPoint index firstPlayfield |
-	index _ constraints indexOf: constraint.
-	globalPoint _ (constraint transformFrom: self world) localPointToGlobal: localPoint.
-	targets _ self world morphsAt: globalPoint.
-	firstPlayfield _ targets detect: [ :ea | ea isPlayfieldLike ] ifNone: [ ].
-	targets _ targets copyUpTo: firstPlayfield.
-	targets _ targets select: [ :ea |
+	index := constraints indexOf: constraint.
+	globalPoint := (constraint transformFrom: self world) localPointToGlobal: localPoint.
+	targets := self world morphsAt: globalPoint.
+	firstPlayfield := targets detect: [ :ea | ea isPlayfieldLike ] ifNone: [ ].
+	targets := targets copyUpTo: firstPlayfield.
+	targets := targets select: [ :ea |
 		(ea wantsAttachmentFromEnd: index ofConnector: self)
 			and: [ (self wantsToAttachEnd: index toMorph: ea) 
 				"and: [ ea isShadowVisibleIn: (Rectangle center: globalPoint extent: 30@30) ]" ] ].

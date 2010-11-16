@@ -1,7 +1,7 @@
 geometry-curves
 computeSegments
 	| segs v3 l1 l2 m1 m2 lastUsed end arrowVertices |
-	arrowVertices _ self arrowVertices.
+	arrowVertices := self arrowVertices.
 	arrowVertices size = 2 
 		ifTrue: 
 			[^{ LineSegment 
@@ -9,7 +9,7 @@ computeSegments
 					to: arrowVertices last }].
 
 	smoothCurve ifFalse: [
-		segs _ Array new: arrowVertices size - 1.
+		segs := Array new: arrowVertices size - 1.
 		arrowVertices overlappingPairsWithIndexDo:  [ :v1 :v2 :i |
 			segs at: i put: (LineSegment from: v1 to: v2)
 		].
@@ -23,7 +23,7 @@ computeSegments
 			v3 := (arrowVertices at: i + 1).
 			l1 := lastUsed dist: v2.
 			l2 := v2 dist: v3.
-			symmetry _ l1 - l2.
+			symmetry := l1 - l2.
 			symmetry < 0
 				ifTrue: 
 					[m1 := (lastUsed + v2) / 2.0.

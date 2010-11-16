@@ -9,7 +9,7 @@ mouseDownInConnected: anEvent
 	constraint := self findEndToDetachNear: pos.
 	constraint ifNotNil: [ ^self trigger: #mouseDownNearEnd withArguments: {  constraint. anEvent}].
 
-	handle _ line handleForEvent: anEvent.
+	handle := line handleForEvent: anEvent.
 	handle ifNotNil: [ 
 		handle visible: false.
 		handle when: #dragStart send: #trigger:with: to: self withArguments: {#dragStart. handle}.

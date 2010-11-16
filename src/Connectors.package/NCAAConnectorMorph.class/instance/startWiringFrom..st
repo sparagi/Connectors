@@ -3,7 +3,7 @@ startWiringFrom: aMorph
 	"NCConnectorMorph new startWiringFrom: (Morph new openInWorld)"
 
 	| hand |
-	hand _ World currentHand.
+	hand := World currentHand.
 	self isWiring: true.
 	self connectStartTo: aMorph at: hand position.
 	constraints second position: hand position.

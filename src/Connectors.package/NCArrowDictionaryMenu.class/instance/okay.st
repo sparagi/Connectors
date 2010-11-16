@@ -1,9 +1,9 @@
 event handling
 okay
 	| nArgs glyph |
-	glyph _ self glyphDictionary at: self nameOfGraphic ifAbsent: [ ].
+	glyph := self glyphDictionary at: self nameOfGraphic ifAbsent: [ ].
 	target ifNotNil:[
-		nArgs _ selector numArgs.
+		nArgs := selector numArgs.
 		nArgs = 1 ifTrue:[target perform: selector with: glyph ].
 		nArgs = 2 ifTrue:[target perform: selector with: glyph with: argument]].
 

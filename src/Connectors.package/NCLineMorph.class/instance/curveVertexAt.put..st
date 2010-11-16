@@ -5,13 +5,13 @@ curveVertexAt: index put: aPoint
 	(index between: 1 and: vertices size) ifFalse: [ ^false ].
 	(smoothCurve not  or: [ index = 1 or: [ (index = vertices size) ]])
 		ifTrue: [ self verticesAt: index put: aPoint. ^true ].
-	attempts _ 0.
+	attempts := 0.
 	[attempts < 10] whileTrue: [
-		seg _ (self segments select: [ :ea | ea isBezier2Segment ]) at: index - 1 ifAbsent: [ ^false ].
-		actual _ seg valueAt: (seg start dist: seg via) / seg length.
-		error _ aPoint - actual.
+		seg := (self segments select: [ :ea | ea isBezier2Segment ]) at: index - 1 ifAbsent: [ ^false ].
+		actual := seg valueAt: (seg start dist: seg via) / seg length.
+		error := aPoint - actual.
 		error r < 1 ifTrue: [ ^true ].
 		self verticesAt: index put: (vertices at: index) + error.
-		attempts _ attempts + 1.
+		attempts := attempts + 1.
 	].
 	^false

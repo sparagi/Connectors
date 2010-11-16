@@ -2,15 +2,15 @@ menus
 selectShapeMenu
 
 	| menu |
-	menu _ MenuMorph new layoutPolicy: TableLayout new.
+	menu := MenuMorph new layoutPolicy: TableLayout new.
 
 	self class preMadeShapeNames do: [ :ea |
 		| morph text ix mm sm |
-		morph _ self class perform: ea.
-		ix _ ea findString: 'Shape' startingAt: 1.
-		ix _ ix = 0 ifTrue: [ ea size ] ifFalse: [ ix - 1 ].
-		text _ (ea copyFrom: 1 to: ix) splitOnCapBoundaries.
-		(mm _ MenuItemMorph new)
+		morph := self class perform: ea.
+		ix := ea findString: 'Shape' startingAt: 1.
+		ix := ix = 0 ifTrue: [ ea size ] ifFalse: [ ix - 1 ].
+		text := (ea copyFrom: 1 to: ix) splitOnCapBoundaries.
+		(mm := MenuItemMorph new)
 			layoutPolicy: TableLayout new;
 			listDirection: #leftToRight;
 			layoutInset: 3@3;
@@ -22,7 +22,7 @@ selectShapeMenu
 			selector: #addShape: ;
 			arguments: { morph }.
 		"The SketchMorph here is because my PolygonMorphs were getting stretched."
-		sm _ SketchMorph withForm: morph imageForm.
+		sm := SketchMorph withForm: morph imageForm.
 		mm addMorphBack: sm.
 		sm heading: -90.
 		mm addMorphBack: AlignmentMorph newVariableTransparentSpacer.

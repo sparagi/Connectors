@@ -8,7 +8,7 @@ drawArrowsOn: aCanvas
 		ifTrue: [^ #() ].
 	"Nothing to do"
 
-	array _ Array with: vertices first with: vertices last.
+	array := Array with: vertices first with: vertices last.
 
 	"Prevent crashes for #raised or #inset borders"
 	borderColor isColor

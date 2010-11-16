@@ -2,10 +2,10 @@ menus
 chooseFont
 	| wasEmptyOrNil oldWrap oldHResizing |
 	label isLocked ifTrue: [ ^self ].
-	wasEmptyOrNil _  label selection isEmptyOrNil.
+	wasEmptyOrNil :=  label selection isEmptyOrNil.
 	wasEmptyOrNil ifTrue: [ label selectAll ].
-	oldWrap _ label isWrapped.
-	oldHResizing _ label hResizing.
+	oldWrap := label isWrapped.
+	oldHResizing := label hResizing.
 	label wrapFlag: false.
 	label chooseFont.
 	label releaseCachedState; changed.

@@ -1,11 +1,11 @@
 layout
 layoutChanged
 	| oldBounds |
-	oldBounds _ self outerBounds.
+	oldBounds := self outerBounds.
 	self needsOwnerSet: true.
 	constraints do: [ :ea | ea forceRedraw ].
-	bounds _ self submorphBounds.
-	fullBounds _ self outerBounds.
+	bounds := self submorphBounds.
+	fullBounds := self outerBounds.
 	fullBounds ~= oldBounds ifTrue: [
 		oldBounds ifNotNil: [ self invalidRect: oldBounds ].
 		self invalidRect: fullBounds ].

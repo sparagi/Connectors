@@ -4,7 +4,7 @@ enterEditing
 
 	| args handle |
 	args := eventHandler lastEventArguments.
-	handle _ args first.
+	handle := args first.
 	self comeToFront.
 	owner isWorldMorph 
 		ifFalse: 

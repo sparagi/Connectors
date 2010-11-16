@@ -1,6 +1,6 @@
 visual properties
 fillStyle: newColor
 
-	fillStyle _ newColor.
-	color _ newColor asColor.
+	fillStyle := newColor.
+	color := newColor asColor.
 	self changed.

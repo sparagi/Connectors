@@ -1,3 +1,3 @@
 arrows
 arrows
-	^arrows ifNil: [ arrows _ self arrows: {nil. nil} ].
+	^arrows ifNil: [ arrows := self arrows: {nil. nil} ].

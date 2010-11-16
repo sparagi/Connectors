@@ -10,8 +10,8 @@ mouseUpInDraggingEnd: anEvent
 		self removeProperty: #startDraggingEvent
 	].
 
-	pt _ self valueOfProperty: #triggeredWireFinish ifAbsent: [ 0@0 ].
-	dist _ anEvent position dist: pt.
+	pt := self valueOfProperty: #triggeredWireFinish ifAbsent: [ 0@0 ].
+	dist := anEvent position dist: pt.
 	dist < 10 ifTrue: [ ^false ].
 
 	anEvent hand releaseMouseFocus: self.

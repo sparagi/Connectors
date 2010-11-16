@@ -1,7 +1,7 @@
 labeling
 addUnwrappedLabel: text near: aPoint
 	| label |
-	label _ (self labelClass new string: text wrap: false).
+	label := (self labelClass new string: text wrap: false).
 	label
 		color: self color;
 		align: label center with: aPoint;

@@ -23,7 +23,7 @@ rebuild
 		self paneForShadowColorPicker.
 	}.
 
-	buttons _ OrderedCollection new.
+	buttons := OrderedCollection new.
 	buttons addAll: {
 	self 
 			buttonNamed: 'Accept' translated action: #doAccept color: color lighter 
@@ -36,7 +36,7 @@ rebuild
 	self addOptionalButtonsTo: buttons.
 	self addARow: buttons.
 
-	thingsToRevert _ Dictionary new.
+	thingsToRevert := Dictionary new.
 	"thingsToRevert at: #fillStyle: put: myTarget fillStyle."
 	myTarget isSystemWindow ifTrue: [
 		thingsToRevert at: #setWindowColor: put: myTarget paneColorToUse

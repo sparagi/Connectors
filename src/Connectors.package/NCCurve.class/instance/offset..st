@@ -4,5 +4,5 @@ offset: aPoint
 	newOffset := aPoint asPoint asFloatPoint.
 	delta := newOffset - self offset.
 	self contours: (self contours collect: [:c | c + delta]).
-	offset  _ newOffset.
+	offset  := newOffset.
 	self updateBounds

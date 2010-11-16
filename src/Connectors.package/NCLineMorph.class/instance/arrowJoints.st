@@ -1,3 +1,3 @@
 arrows
 arrowJoints
-	^arrowJoints ifNil: [ arrowJoints _ { vertices first. vertices last } ].
+	^arrowJoints ifNil: [ arrowJoints := { vertices first. vertices last } ].

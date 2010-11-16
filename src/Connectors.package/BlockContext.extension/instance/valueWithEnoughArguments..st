@@ -5,7 +5,7 @@ valueWithEnoughArguments: anArray
 	(anArray size == self numArgs)
 		ifTrue: [ ^self valueWithArguments: anArray ].
 
-	args _ Array new: self numArgs.
+	args := Array new: self numArgs.
 	args replaceFrom: 1
 		to: (anArray size min: args size)
 		with: anArray

@@ -27,8 +27,8 @@ createSlotFor: anEmbeddedMorph
 		put: (SlotInformation new initialize type: #Player).
 	self addInstanceVarNamed: itsName withValue: (itsPlayer := anEmbeddedMorph assuredPlayer).
 	self class compileAccessorsFor: itsName.
-	setterSelector _ Utilities setterSelectorFor: itsName.
-	initialValue _  self costume presenter standardPlayer.
+	setterSelector := Utilities setterSelectorFor: itsName.
+	initialValue :=  self costume presenter standardPlayer.
 	self class allSubInstancesDo: [ :p | p ~~ self ifTrue: [ p perform: setterSelector with: initialValue ]].
 	anEmbeddedMorph setNamePropertyTo: itsName.
 	openViewers := self allOpenViewersOnReceiverAndSiblings.

@@ -4,7 +4,7 @@ startWiringFrom: aMorph event: anEvent
 
 	| hand |
 	self isWiring: true.
-	hand _ anEvent hand.
+	hand := anEvent hand.
 	self connectStartTo: aMorph at: anEvent position.
 	constraints second position: hand cursorPoint.
 	self openInWorld.

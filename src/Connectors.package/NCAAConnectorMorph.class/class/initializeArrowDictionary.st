@@ -2,7 +2,7 @@ arrows
 initializeArrowDictionary
 	"NCAAConnectorMorph initializeArrowDictionary"
 
-	ArrowGlyphs ifNil: [ ArrowGlyphs _ Dictionary new ].
+	ArrowGlyphs ifNil: [ ArrowGlyphs := Dictionary new ].
 
 	(self class organization listAtCategoryNamed: 'arrow forms') do: [ :sym |
 		ArrowGlyphs at: sym put: (self perform: sym) ].

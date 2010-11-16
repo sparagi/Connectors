@@ -1,8 +1,8 @@
 *connectors-gestures
 prototypesSuchThat: selectionBlock sortedBy: blockList ifNone: defaultBlock
 	| allSelections sortedSelections |
-	allSelections _ self prototypesSuchThat: selectionBlock ifNone: [ #() ].
-	sortedSelections _ OrderedCollection new.
+	allSelections := self prototypesSuchThat: selectionBlock ifNone: [ #() ].
+	sortedSelections := OrderedCollection new.
 	blockList do: [ :block |
 		sortedSelections addAllLast: ((allSelections select: block) copyWithoutAll: sortedSelections)
 	].

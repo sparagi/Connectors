@@ -1,7 +1,7 @@
 *connectors
 drawContourEndDotsOn: canvas 
 	| dotSize |
-	dotSize _ ((bounds extent x max: bounds extent y) / 20) asPoint asFloatPoint.
+	dotSize := ((bounds extent x max: bounds extent y) / 20) asPoint asFloatPoint.
 	contours withIndexDo: 
 			[:a :i | 
 			canvas 

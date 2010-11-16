@@ -6,19 +6,19 @@ slideToTrash: evt
 	((self renderedMorph == Utilities scrapsBook) or: [self renderedMorph isKindOf: TrashCanMorph]) ifTrue:
 		[self dismissMorph.  ^ self].
 	Preferences slideDismissalsToTrash ifTrue:
-		[morphToSlide _ self representativeNoTallerThan: 200 norWiderThan: 200 thumbnailHeight: 100.
-		aForm _ morphToSlide imageForm offset: (0@0).
-		trash _ ActiveWorld
+		[morphToSlide := self representativeNoTallerThan: 200 norWiderThan: 200 thumbnailHeight: 100.
+		aForm := morphToSlide imageForm offset: (0@0).
+		trash := ActiveWorld
 			findDeepSubmorphThat:
 				[:aMorph | (aMorph isKindOf: TrashCanMorph) and:
 					[aMorph topRendererOrSelf owner == ActiveWorld]]
 			ifAbsent:
-				[trash _ TrashCanMorph new.
+				[trash := TrashCanMorph new.
 				trash position: ActiveWorld bottomLeft - (0 @ (trash extent y + 26)).
 				trash openInWorld.
 				trash].
-		endPoint _ trash fullBoundsInWorld center.
-		startPoint _ self topRendererOrSelf fullBoundsInWorld center - (aForm extent // 2)].
+		endPoint := trash fullBoundsInWorld center.
+		startPoint := self topRendererOrSelf fullBoundsInWorld center - (aForm extent // 2)].
 	self dismissMorph.
 	ActiveWorld displayWorld.
 	Preferences slideDismissalsToTrash ifTrue:

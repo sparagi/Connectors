@@ -1,12 +1,12 @@
 event handling
 yellowButtonDown: evt onEnd: aConstraintOrNil 
 	| aMenu |
-	aMenu _ MenuMorph new defaultTarget: self.
+	aMenu := MenuMorph new defaultTarget: self.
 	aMenu addTitle: self externalName.
 	self addYellowButtonMenuItemsTo: aMenu event: evt.
 
 	aConstraintOrNil ifNotNil: [ | subMenu |
-		subMenu _ MenuMorph new defaultTarget: aConstraintOrNil.
+		subMenu := MenuMorph new defaultTarget: aConstraintOrNil.
 		aMenu addLine.
 		aMenu add: 'end...' subMenu: subMenu.
 		self addEndItemsFor: aConstraintOrNil to: aMenu event: evt.

@@ -1,7 +1,7 @@
 event handling
 mouseDownInDisconnected: anEvent
 	| constraint pos |
-	constraint _ self findEndNear: (pos _ anEvent position).
+	constraint := self findEndNear: (pos := anEvent position).
 	"self addedSubmorphs do: [ :h | (h containsPoint: pos)
 		ifTrue: [ ^h processEvent: anEvent  ]]."
 

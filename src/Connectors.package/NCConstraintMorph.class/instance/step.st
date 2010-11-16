@@ -1,7 +1,7 @@
 stepping and presenter
 step
 	| myInputs newTarget |
-	myInputs _ self inputs.		"hang on to them"
+	myInputs := self inputs.		"hang on to them"
 	myInputs isEmpty ifTrue: [
 		constraint ifNotNil: [ constraint := nil. self changed].
 			self dieWithInput ifTrue: [ self delete ].

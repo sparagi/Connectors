@@ -1,8 +1,8 @@
 connectors-labels
 boundsSignatureHash
 	| hash |
-	hash _ line boundsSignatureHash.
+	hash := line boundsSignatureHash.
 	self validConnections do: [ :ea |
-		hash _ (hash + ea boundsSignatureHash + ea owner identityHash) hashMultiply
+		hash := (hash + ea boundsSignatureHash + ea owner identityHash) hashMultiply
 	].
 	^hash

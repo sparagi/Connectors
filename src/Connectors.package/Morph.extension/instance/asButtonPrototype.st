@@ -2,7 +2,7 @@
 asButtonPrototype
 	"I have been dropped on a NCMakerButton as a prototype. Return a duplicate of me ready to be used as a prototype"
 	| newMe |
-	newMe _ self usableSiblingInstance2
+	newMe := self usableSiblingInstance2
 		fullBounds;
 		isPartsDonor: true;
 		stopSteppingSelfAndSubmorphs;

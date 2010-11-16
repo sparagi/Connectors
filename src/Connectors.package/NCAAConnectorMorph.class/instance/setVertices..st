@@ -1,7 +1,7 @@
 geometry
 setVertices: newVertices 
 	| verts |
-	verts _ Array streamContents: [ :s |
+	verts := Array streamContents: [ :s |
 		s nextPut: (newVertices at: 1 ifAbsent: [ self halt ]).
 		newVertices overlappingPairsDo: [ :v1 :v2 |
 			v1 rounded = v2 rounded ifFalse: [ s nextPut: v2 rounded ]]].

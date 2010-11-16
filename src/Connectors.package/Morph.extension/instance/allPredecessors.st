@@ -1,6 +1,6 @@
 *connectors-graphs
 allPredecessors
 	| preds |
-	preds _ IdentitySet new.
+	preds := IdentitySet new.
 	self addAllPredecessorsTo: preds.
 	^preds

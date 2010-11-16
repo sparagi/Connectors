@@ -1,7 +1,7 @@
 labeling
 addLabel: text near: aPoint
 	| label |
-	label _ (self labelClass new string: text).
+	label := (self labelClass new string: text).
 	label
 		color: self color;
 		align: label center with: aPoint;

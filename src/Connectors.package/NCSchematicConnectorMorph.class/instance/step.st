@@ -4,7 +4,7 @@ step
 	otherwise get rid of my end decorations"
 	| newArrowNames |
 	super step.
-	newArrowNames _ constraints collect: [ :const |
+	newArrowNames := constraints collect: [ :const |
 		(const input notNil and: [ const input isConnector ])
 			ifTrue: [ const connectToNearestOrthogonalPoint.
 				const preferredConnection: #(#connectToNearestOrthogonalPoint).

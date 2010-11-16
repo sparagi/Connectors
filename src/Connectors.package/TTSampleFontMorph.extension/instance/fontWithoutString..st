@@ -1,3 +1,3 @@
 *connectors
 fontWithoutString: aTTFontDescription
-	font _ aTTFontDescription.
+	font := aTTFontDescription.

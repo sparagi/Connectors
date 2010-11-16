@@ -4,12 +4,12 @@ needsToApplyConstraintGivenNewTarget: newTarget
 	Do I have to apply the constraint? 
 	If I return true, applyConstraint: will be called."
 	| changed |
-	changed _ (super needsToApplyConstraintGivenNewTarget: newTarget)
+	changed := (super needsToApplyConstraintGivenNewTarget: newTarget)
 		or: [ | same oldHash newHash myInput |
-			oldHash _ self valueOfProperty: #savedBoundsHash ifAbsent: [ 0 ].
-			myInput _ self input.
-			newHash _ myInput ifNotNil: [ myInput boundsSignatureHash ] ifNil: [ 0 ].
-			same _ oldHash = newHash.
+			oldHash := self valueOfProperty: #savedBoundsHash ifAbsent: [ 0 ].
+			myInput := self input.
+			newHash := myInput ifNotNil: [ myInput boundsSignatureHash ] ifNil: [ 0 ].
+			same := oldHash = newHash.
 			same ifFalse: [ self setProperty: #savedBoundsHash toValue: newHash ].
 			same not
 		].

@@ -1,5 +1,5 @@
 arrows
 arrowDictionary
 	^ArrowGlyphs ifNil: [
-		ArrowGlyphs _ Dictionary new.
+		ArrowGlyphs := Dictionary new.
 		self initializeArrowDictionary ].

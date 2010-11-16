@@ -25,7 +25,7 @@ SystemOrganization removeEmptyCategories.
 Morph organization removeEmptyCategories.
 Smalltalk garbageCollect.
 ((Class allSubInstances) do:
-	[:cls | | org badCats | org _ cls organization.
+	[:cls | | org badCats | org := cls organization.
 		(org categories anySatisfy: [ :cat | cat beginsWith2: ''*project-connect'' ])
 			ifTrue: [ org removeEmptyCategories ] ]).
 

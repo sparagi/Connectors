@@ -1,4 +1,4 @@
 *connectors-vector functions
 roundTo: quantum
 	super roundTo: quantum.
-	via _ via roundTo: quantum.
+	via := via roundTo: quantum.

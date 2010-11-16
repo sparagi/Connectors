@@ -7,6 +7,6 @@ scale: aFloatOrPoint
 	newOffset := self offset * ratio.
 	self contours: (self contours 
 				collect: [:c | c collect: [:p | (p - self offset) * ratio + newOffset]]).
-	scale _ newScale.
-	offset _ newOffset.
+	scale := newScale.
+	offset := newOffset.
 	self updateBounds

@@ -1,7 +1,7 @@
 labeling
 addLabel: anEvent
 	| label |
-	label _ self labelClass new string: '  ' wrap: false minWidth: 20.
+	label := self labelClass new string: '  ' wrap: false minWidth: 20.
 	label
 		align: label center with: anEvent position;
 		attachUnobnoxiouslyTo: self at: anEvent position;

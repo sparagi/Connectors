@@ -4,13 +4,13 @@ anchorPreferredConnection: sel at: aPoint
 
 	| target targets |
 
-	targets _ (self pasteUpMorphOrWorld rootMorphsAt: aPoint)
+	targets := (self pasteUpMorphOrWorld rootMorphsAt: aPoint)
 		reject: [ :ea | (ea isHandleMorph)
 			or: [ ea == owner
 				or: [ ea == self
 					or: [ (self allMorphs includes: ea)
 						or: [ (ea isConstrainedBy: self) ] ] ] ] ].
 
-	target _ targets isEmpty ifTrue: [ self pasteUpMorphOrWorld ] ifFalse: [ targets first ].
+	target := targets isEmpty ifTrue: [ self pasteUpMorphOrWorld ] ifFalse: [ targets first ].
 
 	^self anchorPreferredConnection: sel to: target at: aPoint

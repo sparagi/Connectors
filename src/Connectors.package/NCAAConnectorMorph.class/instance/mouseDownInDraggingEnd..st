@@ -1,7 +1,7 @@
 event handling
 mouseDownInDraggingEnd: anEvent
 	| constraint |
-	constraint _ constraints detect: [ :ea | ea input == anEvent hand ] ifNone: [ ^self ].
+	constraint := constraints detect: [ :ea | ea input == anEvent hand ] ifNone: [ ^self ].
 
 	(anEvent shiftPressed or: [anEvent yellowButtonPressed])
 		ifTrue: [

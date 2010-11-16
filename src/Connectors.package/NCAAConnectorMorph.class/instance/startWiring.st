@@ -2,7 +2,7 @@ wiring
 startWiring
 	"NCAAConnectorMorph new startWiring"
 	| hand |
-	hand _ World currentHand.
+	hand := World currentHand.
 	self isWiring: true.
 	self visible: false.
 	hand attachMorph: self.

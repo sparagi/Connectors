@@ -27,8 +27,8 @@ enterHandlingDrop
 	potentialConnections with: potentialTargets do: 
 			[:constraint :targetAndPoint | 
 			| localPoint target |
-			target _ targetAndPoint first.
-			localPoint _ targetAndPoint second.
+			target := targetAndPoint first.
+			localPoint := targetAndPoint second.
 			target isNil
 				ifFalse: [ constraint attachTo: target at: localPoint ]
 				ifTrue: [ constraint connectToNothing; forceRedraw]].

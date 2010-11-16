@@ -2,7 +2,7 @@ new-morph participation
 supplementaryPartsDescriptions
 	| descriptions |
 	"PartsBin clearThumbnailCache; cacheAllThumbnails"
-	descriptions _ OrderedCollection new.
+	descriptions := OrderedCollection new.
 	descriptions addAll: {
 	DescriptionForPartsBin
 		formalName: 'Connector'

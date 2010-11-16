@@ -2,14 +2,14 @@
 nudgeForLabel: labelBounds
 	"Make label not overlap me. Answer an increment, or 0@0 if OK"
 	| flags intersection |
-	intersection _ labelBounds intersect: self bounds.
+	intersection := labelBounds intersect: self bounds.
 	intersection hasPositiveExtent ifFalse: [ ^0@0 ].
 	intersection = labelBounds ifTrue: [ ^0@-1 ].
-	flags _ 0.
-	intersection top == self top ifTrue: [ flags _ flags + 1 ].
-	intersection right == self right ifTrue: [ flags _ flags + 2 ].
-	intersection bottom == self bottom ifTrue: [ flags _ flags + 4 ].
-	intersection left == self left ifTrue: [ flags _ flags + 8 ].
+	flags := 0.
+	intersection top == self top ifTrue: [ flags := flags + 1 ].
+	intersection right == self right ifTrue: [ flags := flags + 2 ].
+	intersection bottom == self bottom ifTrue: [ flags := flags + 4 ].
+	intersection left == self left ifTrue: [ flags := flags + 8 ].
 	^flags caseOf: {
 	"no intersection"
 			[ 0 ] -> [ 0@0 ].

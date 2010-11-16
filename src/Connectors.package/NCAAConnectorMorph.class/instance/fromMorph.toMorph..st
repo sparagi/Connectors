@@ -1,7 +1,7 @@
 initialization
 fromMorph: startMorph toMorph: endMorph 
 	| morphs |
-	morphs _  { 
+	morphs :=  { 
 				startMorph.
 				endMorph}.
 	constraints with: morphs

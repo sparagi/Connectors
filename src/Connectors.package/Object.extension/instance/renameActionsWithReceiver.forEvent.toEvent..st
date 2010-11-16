@@ -2,8 +2,8 @@
 renameActionsWithReceiver: anObject forEvent: anEventSelector toEvent: newEvent
 
 	| oldActions newActions |
-	oldActions _ Set new.
-	newActions _ Set new.
+	oldActions := Set new.
+	newActions := Set new.
 	(self actionSequenceForEvent: anEventSelector) do: [ :action |
 		action receiver == anObject
 			ifTrue: [ oldActions add: anObject ]
