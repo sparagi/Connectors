@@ -1,14 +1,14 @@
 menus
 setActionSelector
 	| newSel possibilities request |
-	possibilities _ #(startWiring startWiringLabeled openInHand openInWorld)
+	possibilities := #(startWiring startWiringLabeled openInHand openInWorld)
 		select: [ :ea | target respondsTo: ea ].
-	request _ 'Please type the selector to be sent to
+	request := 'Please type the selector to be sent to
 the target when this button is pressed.
 Some possibilities:'.
-	possibilities do: [ :ea | request _ request, '
+	possibilities do: [ :ea | request := request, '
 · ', ea ].
-	newSel _ FillInTheBlank
+	newSel := FillInTheBlank
 		request: request
 		initialAnswer: actionSelector.
 	newSel isEmpty ifFalse: [self actionSelector: newSel].

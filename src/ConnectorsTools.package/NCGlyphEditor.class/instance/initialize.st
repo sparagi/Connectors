@@ -2,14 +2,14 @@ initialization
 initialize
 	| buttonBar |
 	super initialize.
-	rotation _ 0.
-	arrowScale _ 2.0@2.0.
-	showDots _ false.
+	rotation := 0.
+	arrowScale := 2.0@2.0.
+	showDots := false.
 	self layoutPolicy: ProportionalLayout new;
 		extent: 710@610;
 		color: Color white.
 	
-	buttonBar _ AlignmentMorph newRow
+	buttonBar := AlignmentMorph newRow
 		color: (Color blue muchLighter paler);
 		layoutInset: 5;
 		listCentering: #centered;

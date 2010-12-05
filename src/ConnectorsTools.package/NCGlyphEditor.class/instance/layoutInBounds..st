@@ -1,4 +1,4 @@
 layout
 layoutInBounds: b
-	transform _ nil.
+	transform := nil.
 	super layoutInBounds: b.

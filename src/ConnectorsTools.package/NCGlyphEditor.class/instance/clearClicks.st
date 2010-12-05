@@ -1,5 +1,5 @@
 button actions
 clearClicks
-	clickPoints _ nil.
-	endPoint _ nil.
+	clickPoints := nil.
+	endPoint := nil.
 	self changed.

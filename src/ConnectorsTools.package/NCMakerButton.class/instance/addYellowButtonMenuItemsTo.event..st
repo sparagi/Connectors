@@ -1,7 +1,7 @@
 menus
 addYellowButtonMenuItemsTo: aMenu event: evt
 	| sketch |
-	sketch _ self findA: SketchMorph.
+	sketch := self findA: SketchMorph.
 	aMenu
 		defaultTarget: self;
 		add: 'move' translated target: evt hand selector: #attachMorph: argument: self;
@@ -38,7 +38,7 @@ addYellowButtonMenuItemsTo: aMenu event: evt
 	target ifNotNil: [ | sub |
 		(target hasYellowButtonMenu)
 			ifFalse: [^aMenu ].
-		sub _ MenuMorph new.
+		sub := MenuMorph new.
 		sub defaultTarget: target.
 		target addYellowButtonMenuItemsTo: sub event: evt.
 		aMenu addLine; add: (target externalName) subMenu: sub.

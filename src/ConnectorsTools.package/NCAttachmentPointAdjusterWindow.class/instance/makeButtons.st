@@ -1,7 +1,7 @@
 buttons
 makeButtons
 	| aligner |
-	aligner _ AlignmentMorph newRow.
+	aligner := AlignmentMorph newRow.
 	aligner
 		color: Color white;
 		vResizing: #spaceFill;
@@ -17,5 +17,5 @@ makeButtons
 		addMorphBack: AlignmentMorph newVariableTransparentSpacer;
 		addMorphBack: self attachmentModeButton;
 		addMorphBack: AlignmentMorph newVariableTransparentSpacer;
-		addMorphBack: (joystick _ JoystickMorph new extent: 40@40; toggleAutoCenter; moveHandleToCenter).
+		addMorphBack: (joystick := JoystickMorph new extent: 40@40; toggleAutoCenter; moveHandleToCenter).
 	^aligner.

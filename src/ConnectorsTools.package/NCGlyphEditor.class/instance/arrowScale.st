@@ -1,4 +1,4 @@
 accessing
 arrowScale
-	sampleLine ifNotNil: [ arrowScale _ sampleLine arrowScales first ].
+	sampleLine ifNotNil: [ arrowScale := sampleLine arrowScales first ].
 	^arrowScale

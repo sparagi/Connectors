@@ -3,7 +3,7 @@ newClassDiagramToolbar
 	"Answer a new toolbar with the standard class diagram symbols"
 	"NCButtonBar newClassDiagramToolbar openInHand"
 	| newMe |
-	(newMe _ self new)
+	(newMe := self new)
 		extent: 80@540;
 		addLabel: 'Class\Diagram' withCRs;
 		addWiringButton: NCAAConnectorMorph newAssociation;

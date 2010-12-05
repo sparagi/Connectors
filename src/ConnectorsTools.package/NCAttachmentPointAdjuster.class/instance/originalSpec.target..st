@@ -1,5 +1,5 @@
 initialization
 originalSpec: spec target: aMorph
-	originalSpec _ spec.
-	target _ aMorph.
+	originalSpec := spec.
+	target := aMorph.
 	self center: self originalPosition

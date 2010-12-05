@@ -1,7 +1,7 @@
 buttons
 fixLayoutFrames
 	| frameOffset |
-	frameOffset _ self cellInset asPoint corner: self cellInset asPoint negated.
+	frameOffset := self cellInset asPoint corner: self cellInset asPoint negated.
 	bounds isTall 
 		ifTrue: 
 			[submorphs withIndexDo: 

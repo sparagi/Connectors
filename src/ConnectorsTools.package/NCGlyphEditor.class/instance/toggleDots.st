@@ -1,4 +1,4 @@
 button actions
 toggleDots
-	showDots _ showDots not.
+	showDots := showDots not.
 	self changed.

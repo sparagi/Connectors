@@ -3,18 +3,18 @@ buttonTarget: target action: selector arguments: args icon: iconName label: labe
 	"Construct an IconicButton with the given icon and label
 	and make it send selector to target with args"
 	| thumbnail button labeledItem form |
-	form _ Imports default imports at: iconName
+	form := Imports default imports at: iconName
 		ifAbsent: [ NCMakerButton squeakyMouseForm ].
-	thumbnail _ (self emptyButtonThumbnail)
+	thumbnail := (self emptyButtonThumbnail)
 		makeThumbnailFromForm: form.
 
-	labeledItem _ AlignmentMorph newColumn beTransparent.
+	labeledItem := AlignmentMorph newColumn beTransparent.
 	labeledItem borderWidth: 0.
 	labeledItem addMorph: thumbnail.
 	labeledItem addMorphBack: (Morph new extent: (4@4)) beTransparent.
 	labeledItem addMorphBack: (BorderedStringMorph contents: label font: (self buttonClass labelFont)).
 
-	button _ IconicButton new.
+	button := IconicButton new.
 	button
 		color: (Color veryLightGray);
 		labelGraphic: labeledItem imageForm;

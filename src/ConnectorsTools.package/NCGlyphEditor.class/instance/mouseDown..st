@@ -3,7 +3,7 @@ mouseDown: evt
 	| pt possible |
 	glyph ifNil: [^self].
 	self clickPoints isEmpty ifFalse: [
-		endPoint _ evt shiftPressed ifTrue: [ clickPoints last ] ifFalse: [ joinPoint ]].
+		endPoint := evt shiftPressed ifTrue: [ clickPoints last ] ifFalse: [ joinPoint ]].
 	pt := transform globalPointToLocal: evt position.
 	self clickPoints addLast: pt.
 	possible := glyph contours collect: 

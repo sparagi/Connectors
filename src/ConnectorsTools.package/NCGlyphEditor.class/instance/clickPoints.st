@@ -1,3 +1,3 @@
 accessing
 clickPoints
-	^clickPoints ifNil: [ clickPoints _ OrderedCollection new ].
+	^clickPoints ifNil: [ clickPoints := OrderedCollection new ].

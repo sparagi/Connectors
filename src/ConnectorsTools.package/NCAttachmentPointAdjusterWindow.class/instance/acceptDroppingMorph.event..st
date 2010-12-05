@@ -4,6 +4,6 @@ acceptDroppingMorph: aMorph event: evt
 	(aMorph isHandleMorph) ifTrue: [ ^self ].
 	super acceptDroppingMorph: aMorph event: evt.
 	(aMorph isAttachmentPointAdjuster) ifTrue: [ ^self ].
-	target _ aMorph.
+	target := aMorph.
 	self initializeOriginalPositionFor: aMorph.
 	joystick moveHandleToCenter.

@@ -1,6 +1,6 @@
 button actions
 rotateGlyph
-	rotation _ (rotation + 90) \\ 360.
-	transform _ nil.
-	clickPoints _ nil.
+	rotation := (rotation + 90) \\ 360.
+	transform := nil.
+	clickPoints := nil.
 	self changed.

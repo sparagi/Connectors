@@ -5,6 +5,6 @@ mouseDown: evt
 		ifTrue: [^ self yellowButtonActivity: evt shiftPressed ].
 	self eventHandler ifNotNil:
 		[self eventHandler mouseDown: evt fromMorph: self].		"from Morph"
-	oldColor _ self fillStyle. 
+	oldColor := self fillStyle. 
 	self updateVisualState: evt.
 	evt hand waitForClicksOrDrag: self event: evt

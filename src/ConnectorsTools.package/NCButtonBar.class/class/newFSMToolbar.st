@@ -3,7 +3,7 @@ newFSMToolbar
 	"Answer a new toolbar with the standard FSM symbols"
 	"NCButtonBar newFSMToolbar openInHand"
 	| newMe |
-	newMe _ self new.
+	newMe := self new.
 	newMe
 		addLabel: 'State\Diagram' withCRs;
 		extent: 77@404.

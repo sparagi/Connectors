@@ -4,5 +4,5 @@ displayAttachmentPointsFor: aMorph
 	Upon calling setAttachmentPointsFromDisplayed, I will read
 	their positions and (re) set my attachment points"
 	| ams |
-	ams _ self attachmentPointSpecs collect: [ :ea | NCAttachmentPointAdjuster new originalSpec: ea target: self ].
+	ams := self attachmentPointSpecs collect: [ :ea | NCAttachmentPointAdjuster new originalSpec: ea target: self ].
 	ams do: [ :ea | aMorph addMorphFront: ea ].

@@ -3,10 +3,10 @@ adjusterWindow
 	"Answer a SystemWindow set up as an adjuster panel"
 	"NCAttachmentPointAdjusterWindow adjusterWindow openInHand"
 	| window adjuster buttonHeight buttons |
-	window _ SystemWindow new.
-	adjuster _ self new.
-	buttons _ adjuster makeButtons.
-	buttonHeight _ buttons submorphs last height + 8.
+	window := SystemWindow new.
+	adjuster := self new.
+	buttons := adjuster makeButtons.
+	buttonHeight := buttons submorphs last height + 8.
 	window addMorph: buttons
 		fullFrame: (LayoutFrame fractions: (0@0 corner: 1@0) offsets: (0@0 corner: 0@buttonHeight)).
 	window addMorph: adjuster

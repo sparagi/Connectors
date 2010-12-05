@@ -3,7 +3,7 @@ drawOn: aCanvas
 	| ovalsize |
 	super drawOn: aCanvas.
 	glyph ifNil: [^self].
-	ovalsize _ (glyph bounds extent x max: glyph bounds extent y) / 10.0.
+	ovalsize := (glyph bounds extent x max: glyph bounds extent y) / 10.0.
 	aCanvas 
 		frameAndFillRectangle: (self editBox)
 		fillColor: self color

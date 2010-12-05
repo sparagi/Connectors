@@ -2,11 +2,11 @@ button actions
 writeConstructor
 
 	| string name sample |
-	sample _ self sampleGlyph.
+	sample := self sampleGlyph.
 	sample ifNil: [ ^self ].
-	name _ FillInTheBlankMorph request: 'Install in which selector?'.
+	name := FillInTheBlankMorph request: 'Install in which selector?'.
 
-	string _ String streamContents: [ :stream |
+	string := String streamContents: [ :stream |
 		stream nextPutAll: name; cr; tab.
 		stream nextPutAll: '"glyph '; print: glyph glyphIndex; nextPutAll: ' from '; nextPutAll: font name; nextPut: $"; cr.
 		stream nextPutAll: '	^'.

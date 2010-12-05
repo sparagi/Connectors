@@ -1,4 +1,4 @@
 copying
 veryDeepFixupWith: aCopier
 	super veryDeepFixupWith: aCopier.
-	target _ aCopier references at: target ifAbsent: [ target ].
+	target := aCopier references at: target ifAbsent: [ target ].

@@ -1,6 +1,6 @@
 label
 removeLabel
 	| label |
-	label _ self label.
+	label := self label.
 	label ifNil: [ ^self ].
 	label delete.

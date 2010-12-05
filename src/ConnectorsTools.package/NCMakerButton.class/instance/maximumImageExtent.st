@@ -1,8 +1,8 @@
 accessing
 maximumImageExtent
 	^ self valueOfProperty: #maximumImageExtent ifAbsent: [ | sketch sketchExtent |
-		sketch _ self sketch.
-		(sketch isNil or: [ (sketchExtent _ sketch form extent) isZero ])
+		sketch := self sketch.
+		(sketch isNil or: [ (sketchExtent := sketch form extent) isZero ])
 			ifTrue: [ 30@30 ]
 			ifFalse: [ sketchExtent ]
 		]

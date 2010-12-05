@@ -1,4 +1,4 @@
 private
 privateMoveBy: delta
-	transform _ nil.
+	transform := nil.
 	super privateMoveBy: delta
