@@ -1,3 +1,3 @@
 initialization
 scale: aNumber
-	scale _ aNumber
+	scale := aNumber

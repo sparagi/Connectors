@@ -1,3 +1,3 @@
 initialization
 maxIterations: max
-	maxIterations _ max.
+	maxIterations := max.

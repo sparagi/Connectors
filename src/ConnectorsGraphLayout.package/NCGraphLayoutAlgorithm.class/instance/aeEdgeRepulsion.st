@@ -5,24 +5,24 @@ aeEdgeRepulsion
 	between nodes and the edge. 
 	Since I consider all nodes, my time complexity is O(|V|)"
 	| centers retval |
-	retval _ OrderedCollection new.
-	centers _ self nodes
+	retval := OrderedCollection new.
+	centers := self nodes
 				collect: [:ea | ea center asFloatPoint].
 	centers
 		do: [:center | 
 			| delta mag2x mag2y | 
-			delta _ center x < self layoutMorph center x
+			delta := center x < self layoutMorph center x
 						ifTrue: [center x - self layoutMorph left]
 						ifFalse: [center x - self layoutMorph right].
-			delta _ delta / scale.
-			mag2x _ delta isZero
+			delta := delta / scale.
+			mag2x := delta isZero
 						ifTrue: [1.0e8]
 						ifFalse: [delta sign / (delta * delta) max: 1.0e-8].
-			delta _ center y < self layoutMorph center y
+			delta := center y < self layoutMorph center y
 						ifTrue: [center y - self layoutMorph top]
 						ifFalse: [center y - self layoutMorph bottom].
-			delta _ delta / scale.
-			mag2y _ delta isZero
+			delta := delta / scale.
+			mag2y := delta isZero
 						ifTrue: [1.0e8]
 						ifFalse: [delta sign / (delta * delta) max: 1.0e-8].
 			retval addLast: mag2x @ mag2y].

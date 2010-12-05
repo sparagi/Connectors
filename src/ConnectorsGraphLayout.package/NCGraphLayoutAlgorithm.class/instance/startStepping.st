@@ -1,6 +1,6 @@
 stepping
 startStepping
-	iterations _ iterations - (iterations \\ 3).
+	iterations := iterations - (iterations \\ 3).
 	layoutMorph ifNil: [^self].
 	World
 		startStepping: self

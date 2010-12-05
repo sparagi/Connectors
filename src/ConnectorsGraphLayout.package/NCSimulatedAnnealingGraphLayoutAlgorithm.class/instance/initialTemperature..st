@@ -1,3 +1,3 @@
 initialization
 initialTemperature: aNumber
-	initialTemperature _ aNumber.
+	initialTemperature := aNumber.
