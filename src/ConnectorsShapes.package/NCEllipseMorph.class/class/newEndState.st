@@ -2,9 +2,9 @@ parts bin
 newEndState
 	"Construct a state diagram end state symbol"
 	| inner outer |
-	inner _ self newStartState.
+	inner := self newStartState.
 	inner lock.
-	outer _ self new
+	outer := self new
 		removeAllMorphs;
 		hResizing: #rigid;
 		vResizing: #rigid;

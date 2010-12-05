@@ -1,8 +1,8 @@
 drawing
 drawOn: aCanvas
 	| triangleSize triangleCorners |
-	triangleSize _ 12.
-	triangleCorners _ { (self position + (triangleSize@0)) . (self position + (0@triangleSize)) . (self position + (triangleSize@triangleSize)) }.
+	triangleSize := 12.
+	triangleCorners := { (self position + (triangleSize@0)) . (self position + (0@triangleSize)) . (self position + (triangleSize@triangleSize)) }.
 
 	aCanvas fillRectangle: (triangleCorners first extent: ((self width - triangleSize) @ triangleSize)) color: self color.
 	aCanvas fillRectangle: (triangleCorners second corner: self bottomRight) color: self color.

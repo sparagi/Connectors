@@ -1,7 +1,7 @@
 menus
 becomeComposite
 	| newMorph |
-	newMorph _ NCCompositeStateMorph newCompositeState.
+	newMorph := NCCompositeStateMorph newCompositeState.
 	newMorph textRectangle
 		layoutPolicy: self layoutPolicy;
 		removeAllMorphs;

@@ -7,10 +7,10 @@ newClassDiagramConnectorsFlap
 	"
 
 	|  aFlapTab aStrip |
-	aStrip _ self preferredConnectorsFlapBinClass
+	aStrip := self preferredConnectorsFlapBinClass
 		newPartsBinWithOrientation: #leftToRight andColor: (Color blue muchLighter alpha: 0.3) from: self quadsDefiningClassDiagramConnectorsFlap buttonClass: self preferredConnectorsButtonClass.
  
-	aFlapTab _ FlapTab new referent: aStrip beSticky.
+	aFlapTab := FlapTab new referent: aStrip beSticky.
 	aFlapTab setName: 'Class Diagrams' edge: #bottom color: Color blue muchLighter.
 	aFlapTab setBalloonText: aFlapTab balloonTextForFlapsMenu.
 

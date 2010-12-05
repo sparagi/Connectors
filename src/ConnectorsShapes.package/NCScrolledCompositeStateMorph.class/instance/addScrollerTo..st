@@ -3,7 +3,7 @@ addScrollerTo: playfield
 	playfield hResizing: #rigid;
 		 vResizing: #rigid;
 		 extent: 400 @ 400.
-	scrollPane _ TwoWayScrollPane new
+	scrollPane := TwoWayScrollPane new
 				extent: self stateRectangle extent;
 				 hResizing: #spaceFill;
 				 vResizing: #spaceFill;

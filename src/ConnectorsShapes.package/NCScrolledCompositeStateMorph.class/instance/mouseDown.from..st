@@ -7,5 +7,5 @@ mouseDown: evt from: submorph
 			event: evt 
 			selectors: { #findWindow:. nil. nil. #dragThroughOnDesktop:}
 			threshold: 5].
-	transformedEvent _ evt transformedBy: (submorph transformFrom: self) inverseTransformation.
+	transformedEvent := evt transformedBy: (submorph transformFrom: self) inverseTransformation.
 	self mouseDown: transformedEvent.

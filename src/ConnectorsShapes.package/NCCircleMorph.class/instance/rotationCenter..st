@@ -6,7 +6,7 @@ rotationCenter: aPointOrNil
 		ifTrue: [self removeProperty: #referencePosition.
 			self removeProperty: #originalCenter.
 			self removeProperty: #originalAngle. ]
-		ifFalse: [ box _ self bounds.
-				newRef _ box origin + (aPointOrNil * box extent).
+		ifFalse: [ box := self bounds.
+				newRef := box origin + (aPointOrNil * box extent).
 				self setRotationCenterFrom: newRef ].
 

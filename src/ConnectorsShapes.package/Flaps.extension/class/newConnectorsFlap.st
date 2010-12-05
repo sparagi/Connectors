@@ -4,10 +4,10 @@ newConnectorsFlap
 	"Flaps newConnectorsFlap openInWorld; setToPopOutOnDragOver: false."
 
 	|  aFlapTab aStrip |
-	aStrip _ self preferredConnectorsFlapBinClass
+	aStrip := self preferredConnectorsFlapBinClass
 		newPartsBinWithOrientation: #leftToRight andColor: (Color blue muchLighter alpha: 0.8) from: self quadsDefiningConnectorsFlap buttonClass: self preferredConnectorsButtonClass.
  
-	aFlapTab _ FlapTab new referent: aStrip beSticky.
+	aFlapTab := FlapTab new referent: aStrip beSticky.
 	aFlapTab setName: 'Connectors' edge: #bottom color: Color blue muchLighter.
 	aFlapTab setBalloonText: aFlapTab balloonTextForFlapsMenu.
 

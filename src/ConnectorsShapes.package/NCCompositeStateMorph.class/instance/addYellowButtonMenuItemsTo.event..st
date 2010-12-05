@@ -1,7 +1,7 @@
 menus
 addYellowButtonMenuItemsTo: aCustomMenu event: evt
 	| swimLanes |
-	swimLanes _ (self stateRectangle submorphs size + 1) // 2.
+	swimLanes := (self stateRectangle submorphs size + 1) // 2.
 	super addYellowButtonMenuItemsTo: aCustomMenu event: evt.
 	aCustomMenu addLine.
 	aCustomMenu add: 'add swim lane' translated target: self selector: #addSwimLane: argument: evt.

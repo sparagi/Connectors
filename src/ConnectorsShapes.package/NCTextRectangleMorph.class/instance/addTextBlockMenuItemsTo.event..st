@@ -3,14 +3,14 @@ addTextBlockMenuItemsTo: aCustomMenu event: evt
 	|  sm tm |
 	aCustomMenu addLine.
 
-	sm _ submorphs 
+	sm := submorphs 
 		detect: [ :ea | ea containsPoint: evt position ]
 		ifNone: [ ].
 	sm ifNotNil: [
 		(sm isTextMorph)
 			ifTrue: [ | morphs |
-				tm _ sm.
-				morphs _ self morphsInTextBlockContaining: sm.
+				tm := sm.
+				morphs := self morphsInTextBlockContaining: sm.
 				aCustomMenu add: 'delete text block' translated
 					target: self
 					selector: #deleteMorphs:
