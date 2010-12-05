@@ -5,16 +5,16 @@ width: x height: y type: collectionClass
 
 	| newContents oldWidth oldHeight |
 	contents ifNil: [
-		contents _ collectionClass new: x * y.
-		width _ x.
-		height _ y.
+		contents := collectionClass new: x * y.
+		width := x.
+		height := y.
 		^self.
 	].
 	"trickier... have to resize"
 
-	oldWidth _ self width.
-	oldHeight _ self height.
-	newContents _ collectionClass new: x * y.
+	oldWidth := self width.
+	oldHeight := self height.
+	newContents := collectionClass new: x * y.
 
 	1 to: (oldHeight min: y) do: [ :row |
 		1 to: (oldWidth min: x) do: [ :col |
@@ -23,7 +23,7 @@ width: x height: y type: collectionClass
 				put: (contents at: (row - 1 * oldWidth) + col) 
 		]
 	].
-	contents _ newContents.
-	width _ x.
-	height _ y.
+	contents := newContents.
+	width := x.
+	height := y.
 	

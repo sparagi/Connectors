@@ -1,6 +1,6 @@
 initialization
 initialize
-	classMorphs _ WeakValueDictionary new.
-	connections _ WeakValueDictionary new.
-	random _ Random new.
+	classMorphs := WeakValueDictionary new.
+	connections := WeakValueDictionary new.
+	random := Random new.
 	self pasteUp: self currentWorld.

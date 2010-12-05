@@ -4,7 +4,7 @@ removeAll
 	toRemove := Set new.
 	toRemove addAll: connections.
 	toRemove addAll: classMorphs.
-	classMorphs _ WeakValueDictionary new.
-	connections _ WeakValueDictionary new.
+	classMorphs := WeakValueDictionary new.
+	connections := WeakValueDictionary new.
 	self pasteUp removeAllMorphsIn: toRemove.
 	^toRemove

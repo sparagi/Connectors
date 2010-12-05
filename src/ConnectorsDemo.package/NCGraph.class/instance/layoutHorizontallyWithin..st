@@ -5,7 +5,7 @@ layoutHorizontallyWithin: rect
 	cellSize := 0 @ 0.
 	q := OrderedCollection new.
 	rows := OrderedCollection new.
-	aPoint _ rect origin.
+	aPoint := rect origin.
 	positions := IdentityDictionary new.
 	lastAdded := nil.
 	distance := 0.
@@ -55,6 +55,6 @@ layoutHorizontallyWithin: rect
 	self edges do: [:ea | ea straighten].
 
 	[ grid condenseVertically > 0 ] whileTrue.
-	cellSize _ rect extent // grid usedExtent.
+	cellSize := rect extent // grid usedExtent.
 	grid
 		keysAndValuesDo: [ :pos :node | node position: aPoint + (pos - (1@1) * cellSize)].
