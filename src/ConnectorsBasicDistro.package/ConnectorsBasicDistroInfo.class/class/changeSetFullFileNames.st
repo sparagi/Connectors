@@ -2,6 +2,6 @@ distribution
 changeSetFullFileNames
 	"ConnectorsBasicDistroInfo changeSetFullFileNames"
 	| dir |
-	dir _ self changeSetDirectory.
+	dir := self changeSetDirectory.
 	^self changeSets collect: [ :s | 
 		dir fullNameFor: (dir lastNameFor: s extension: 'cs') ]

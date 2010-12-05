@@ -4,7 +4,7 @@ makeSAR
 	ConnectorsBasicDistroInfo makeSAR
 	"
 	| sar result sarName |
-	sar _ ZipArchive new.
+	sar := ZipArchive new.
 	self changeSetFullFileNames do: [ :fileName | sar addFile: fileName as: (FileDirectory localNameFor: fileName) ].
 	self mczFullFileNames do: [ :fileName | sar addFile: fileName as: (FileDirectory localNameFor: fileName) ].
 	"self icons with: self iconFileNames do: [ :iconname :fileName |
@@ -15,7 +15,7 @@ makeSAR
 	sar addString: self preambleText as: 'install/preamble'.
 	sar addString: self postscriptText as: 'install/postscript'.
 
-	result _ StandardFileMenu newFile.
+	result := StandardFileMenu newFile.
 	result ifNil: [ ^nil ].
-	sarName _ (result directory fullNameFor: result name).
+	sarName := (result directory fullNameFor: result name).
 	sar writeToFileNamed: sarName.
