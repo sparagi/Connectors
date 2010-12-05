@@ -6,13 +6,13 @@ transitionDynamicallyTo: target
 	See PSCC++ listing 4.10"
 	| entry p q s  |
 	self assert: [ target ~= self top ].	"cannot target 'top' state."
-	entry _ OrderedCollection new.
+	entry := OrderedCollection new.
 
 	"First, exit all the nested states between myState and mySource."
-	s _ myState.
+	s := myState.
 	[ s ~= mySource ] whileTrue: [
 		self assert: [ s notNil ].
-		s _ s exit ifNil: [ s superstate ].
+		s := s exit ifNil: [ s superstate ].
 	].
 
 	"Now check all seven of the possible source/target state combinations"
@@ -25,13 +25,13 @@ transitionDynamicallyTo: target
 	].
 
 	"(b) check mySource == target superstate"
-	p _ target superstate.
+	p := target superstate.
 	mySource = p ifTrue: [ ^self enter: target via: entry ].	"no exit action"
 	
 	self assert: [ mySource notNil ].
 
 	"(c) check mySource superstate == target superstate (most common)"
-	q _ mySource superstate.
+	q := mySource superstate.
 	q = p ifTrue: [
 		mySource exit.
 		^self enter: target via: entry.
@@ -46,11 +46,11 @@ transitionDynamicallyTo: target
 
 	"(e) check rest of mySource = target super super [...] hierarchy"
 	entry addLast: p.
-	s _ p superstate.
+	s := p superstate.
 	[ s notNil ] whileTrue: [
 		mySource = s ifTrue: [ ^self enter: target via: entry ].
 		entry addLast: s.
-		s _ s superstate.
+		s := s superstate.
 	].
 
 	"otherwise we're definitely exiting mySource."
@@ -64,7 +64,7 @@ transitionDynamicallyTo: target
 	].
 
 	"(g) check each mySource super super [...] for each target super [...]"
-	s _ q.
+	s := q.
 	[ s notNil ] whileTrue: [
 		entry size to: 1 by: -1 do: [ :lca |
 			s = (entry at: lca) ifTrue: [
@@ -72,7 +72,7 @@ transitionDynamicallyTo: target
 			]
 		].
 		s exit.
-		s _ s superstate.
+		s := s superstate.
 	].
 
 	self assert: [ false ].			"malformed FSM"

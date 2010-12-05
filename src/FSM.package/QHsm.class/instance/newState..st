@@ -6,6 +6,6 @@ newState: aStateName
 	in a handler method.
 	A static state transition is one in which the source and target of the transition do not change at run time.
 	See also #newDynamicState:"
-	"Q_TRAN()"
+	"Q:=TRAN()"
 	self transitionDynamicallyTo: (self state: aStateName).
 	^nil

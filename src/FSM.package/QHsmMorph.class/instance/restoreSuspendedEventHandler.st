@@ -1,8 +1,8 @@
 event handling-overrides
 restoreSuspendedEventHandler
 	| savedHandler |
-	(savedHandler _ self valueOfProperty: #suspendedEventHandler) ifNotNil:
-		[ eventHandler _ savedHandler.
+	(savedHandler := self valueOfProperty: #suspendedEventHandler) ifNotNil:
+		[ eventHandler := savedHandler.
 		self removeProperty: #suspendedEventHandler.
 		self trigger: #restoreSuspendedEventHandler.
 		self processDeferredEvents ].

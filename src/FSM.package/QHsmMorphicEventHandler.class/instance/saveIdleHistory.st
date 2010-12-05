@@ -1,3 +1,3 @@
 state handler actions
 saveIdleHistory
-	idleHistory _ self currentState.
+	idleHistory := self currentState.

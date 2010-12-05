@@ -5,7 +5,7 @@ veryDeepFixupWith: deepCopier
 	| old |
 	super veryDeepFixupWith: deepCopier.
 	1 to: self class instSize do: [ :ii | 
-			old _ self instVarAt: ii.
+			old := self instVarAt: ii.
 			self
 				instVarAt: ii
 				put: (deepCopier references

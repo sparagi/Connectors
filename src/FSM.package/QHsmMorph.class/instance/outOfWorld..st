@@ -4,5 +4,5 @@ outOfWorld: aWorld
 		self processDeferredEvents.
 		self stopStepping.
 		self eventHandler handleEvent: #outOfWorld.
-		eventHandler _ nil ].
+		eventHandler := nil ].
 	super outOfWorld: aWorld

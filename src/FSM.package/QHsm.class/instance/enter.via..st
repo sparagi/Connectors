@@ -5,9 +5,9 @@ enter: target via: entry
 	"inLCA:"
 	| sub |
 	entry reverseDo: [ :s | s enter ].	"retrace the entry path in reverse order"
-	myState _ sub _ target.
+	myState := sub := target.
 	[ (sub init) isNil ] whileTrue: [
 		self assert: [ sub = myState superstate ] description: 'initial transition must go one level deep'.
-		sub _ myState.
+		sub := myState.
 		sub enter.		"enter target"
 	]

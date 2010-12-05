@@ -1,10 +1,10 @@
 running
 dispatch: anEvent
 	| originalState handlerState  |
-	originalState _ myState.
+	originalState := myState.
 	Transcript nextPutAll: 'State: '; print: myState stateName;
 		nextPutAll: ' Event: '; print: anEvent; cr.
-	handlerState _ super dispatch: anEvent.
+	handlerState := super dispatch: anEvent.
 	Transcript nextPutAll: 'Handler: '; print: handlerState.
 	myState ~= originalState ifTrue: [ Transcript nextPutAll: ' NewState: '; print: myState ].
 	Transcript cr; endEntry.

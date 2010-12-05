@@ -4,13 +4,13 @@ init: anEventOrNil
 	Must be called only once for a given QHsm before dispatching any events to it."
 	| s |
 	self assert: [ myState stateName = #Top and: [ mySource notNil ] ].
-	s _ myState.	"save top in temp"
+	s := myState.	"save top in temp"
 	mySource trigger: anEventOrNil.		"topmost initial transition"
 	self assert: [ s = myState superstate ].	"verify that we only went one level deep"
-	s _ myState.
+	s := myState.
 	s enter.
 	[ s init isNil ] whileTrue: [ 		"while init is handled"
 		self assert: [ s = myState superstate ].	"verify that we only went one level deep"
-		s _ myState.
+		s := myState.
 		s enter.						"and enter substate"
 	]

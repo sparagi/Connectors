@@ -7,6 +7,6 @@ suspendEventHandler
 			self stopStepping.
 			self eventHandler handleEvent: #suspendEventHandler.
 			self setProperty: #suspendedEventHandler toValue: self eventHandler.
-			eventHandler _ nil].
+			eventHandler := nil].
 	submorphs
 		do: [:m | m suspendEventHandler]

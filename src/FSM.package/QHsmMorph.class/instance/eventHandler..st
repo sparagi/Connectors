@@ -1,3 +1,3 @@
 accessing
 eventHandler: anObjectOrNil
-	eventHandler _ anObjectOrNil.
+	eventHandler := anObjectOrNil.

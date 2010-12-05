@@ -6,7 +6,7 @@ newDynamicState: aStateName
 		^self newDynamicState: 'whatever'
 	in a handler method.
 	See also #newState:"
-	"Q_TRAN_DYN()"
+	"Q:=TRAN:=DYN()"
 
 	self transitionDynamicallyTo: (self state: aStateName).
 	^nil

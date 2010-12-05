@@ -1,3 +1,3 @@
 accessing
 myFoo: aBoolean
-	myFoo _ aBoolean
+	myFoo := aBoolean

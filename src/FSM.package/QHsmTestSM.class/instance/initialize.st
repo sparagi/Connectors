@@ -1,5 +1,5 @@
 initialization
 initialize
 	super initialize.
-	events _ OrderedCollection new.
-	transitions _ OrderedCollection new.
+	events := OrderedCollection new.
+	transitions := OrderedCollection new.

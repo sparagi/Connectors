@@ -2,7 +2,7 @@ private
 handleBasicEvent: anEvent eventOrType: anEventOrType 
 	| lastEvent |
 	handled := true.
-	lastEvent _ event.
+	lastEvent := event.
 	event := anEvent.
 	self dispatch: anEventOrType.
 	event := lastEvent.

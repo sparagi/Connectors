@@ -4,13 +4,13 @@ selectorFor: type in: stateName
 
 	| selector |
 	"first try full selector"
-	selector _ self fullSelectorFor: type in: stateName.
+	selector := self fullSelectorFor: type in: stateName.
 	Symbol hasInterned: selector ifTrue: [ :sym |
 		(self respondsTo: sym)
 			ifTrue: [ ^sym ]].
 
 	"then try short selector"
-	selector _ self shortSelectorFor: type in: stateName.
+	selector := self shortSelectorFor: type in: stateName.
 	Symbol hasInterned: selector ifTrue: [ :sym |
 		(self respondsTo: sym)
 			ifTrue: [ ^sym ]].

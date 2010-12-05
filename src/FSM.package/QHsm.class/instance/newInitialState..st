@@ -5,7 +5,7 @@ newInitialState: aStateOrName
 	Answers nil for convenience: you can say:
 		^self newInitialState: 'whatever'
 	in a handler method.
-	Q_INIT()"
+	Q:=INIT()"
 
-	myState _ self state: aStateOrName.
+	myState := self state: aStateOrName.
 	^nil

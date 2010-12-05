@@ -1,3 +1,0 @@
-Running
-tearDown
-	Transcript endEntry.
