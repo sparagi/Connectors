@@ -1,3 +1,3 @@
-as yet unclassified
+geometry
 unrotatedWidth
 	^self lineWidth
