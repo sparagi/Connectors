@@ -1,6 +1,6 @@
 initialization
 initialize
 	super initialize.
-	wrapFlag _ false.
+	wrapFlag := false.
 	self margins: 6@0.
 	self autoFit: true

@@ -1,7 +1,7 @@
 event handling
 startDrag: evt 
 	| root |
-	root _ self rootInPasteUp.
+	root := self rootInPasteUp.
 	evt hand releaseKeyboardFocus: self.
 	root eventHandler
 		ifNotNil: [(root eventHandler handlesClickOrDrag: evt)
