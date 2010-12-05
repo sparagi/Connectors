@@ -1,4 +1,4 @@
 accessing
 lineWidth: aNumber
-	width _ aNumber.
+	width := aNumber.
 	self changed

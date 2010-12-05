@@ -1,12 +1,12 @@
 accessing
 hotspot: aPoint 
 	| newBounds top bottom left |
-	top _ aPoint y - span min: bounds top.
-	bottom _ aPoint y + span max: bounds bottom.
-	left _ aPoint x min: start x.
-	lastHotspot _ hotspot.
-	hotspot _ left @ aPoint y.
-	newBounds _ Rectangle
+	top := aPoint y - span min: bounds top.
+	bottom := aPoint y + span max: bounds bottom.
+	left := aPoint x min: start x.
+	lastHotspot := hotspot.
+	hotspot := left @ aPoint y.
+	newBounds := Rectangle
 				left: left
 				right: left  + bounds width
 				top: top

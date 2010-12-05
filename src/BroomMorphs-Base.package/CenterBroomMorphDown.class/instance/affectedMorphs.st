@@ -2,7 +2,7 @@ private
 affectedMorphs
 	"Answer all the morphs that I should be moving"
 	| movedRect |
-	movedRect _ self bounds encompass: hotspot x @ lastHotspot y.
+	movedRect := self bounds encompass: hotspot x @ lastHotspot y.
 	^ owner submorphs
 		select: [:m | movedRect
 				intersects: (Rectangle

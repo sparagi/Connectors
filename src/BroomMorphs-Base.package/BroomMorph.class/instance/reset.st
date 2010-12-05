@@ -1,5 +1,5 @@
 initialization
 reset
-	moved _ IdentityDictionary new.		"morph -> original bounds"
-	unmoved _ IdentitySet new.
+	moved := IdentityDictionary new.		"morph -> original bounds"
+	unmoved := IdentitySet new.
 	self resetExtent

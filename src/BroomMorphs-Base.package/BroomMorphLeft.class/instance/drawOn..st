@@ -1,7 +1,7 @@
 drawing
 drawOn: aCanvas
 	| halfWidth |
-	halfWidth _ (width + 1 // 2).
+	halfWidth := (width + 1 // 2).
 	aCanvas line: bounds leftCenter + (halfWidth@0) to: bounds rightCenter + (halfWidth negated @0) width: width color: self color.
 	aCanvas line: bounds topLeft + (halfWidth @ halfWidth) to: bounds bottomLeft + (halfWidth @halfWidth  negated) width: width color: self color.
 	aCanvas line: self hotspot + (width * 2 @ (span negated)) to: self hotspot + (1 @ (span negated)) color: self color.

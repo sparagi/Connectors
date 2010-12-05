@@ -1,5 +1,5 @@
 private
 hotspot: aPoint
-	lastHotspot _ hotspot.
-	hotspot _ aPoint.
+	lastHotspot := hotspot.
+	hotspot := aPoint.
 	^self center: aPoint

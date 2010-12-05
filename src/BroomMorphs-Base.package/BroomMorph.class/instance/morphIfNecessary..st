@@ -1,11 +1,11 @@
 stepping and presenter
 morphIfNecessary: yellowButtonPressed
 	| pt delta threshold cls center |
-	center _ yellowButtonPressed | centered.
-	pt _ self center.
-	threshold _ self width / 2.
-	delta _ pt - start.
-	cls _ delta x > threshold
+	center := yellowButtonPressed | centered.
+	pt := self center.
+	threshold := self width / 2.
+	delta := pt - start.
+	cls := delta x > threshold
 				ifTrue: [center
 						ifTrue: [CenterBroomMorphRight]
 						ifFalse: [BroomMorphRight]]

@@ -5,7 +5,7 @@ justDroppedInto: aMorph event: anEvent
 	self centered: anEvent hand lastEvent yellowButtonPressed.
 	self transient ifFalse: [ ^self ].
 		self reset.
-		self hotspot: (start _ anEvent position).
+		self hotspot: (start := anEvent position).
 		anEvent hand mouseFocus: self.
 		anEvent hand keyboardFocus: self.
 		"Cursor blank show."

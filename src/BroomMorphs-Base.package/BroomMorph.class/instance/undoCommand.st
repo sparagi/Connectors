@@ -1,8 +1,8 @@
 undo
 undoCommand
 	| cmd args |
-	cmd _ Command new cmdWording: 'align morphs'.
-	args _ OrderedCollection new.
+	cmd := Command new cmdWording: 'align morphs'.
+	args := OrderedCollection new.
 	moved keysAndValuesDo: [ :m :b |
 		args add: { m. b. m bounds. m owner. m owner morphPreceding: m }
 	].

@@ -1,5 +1,5 @@
 accessing
 span: aNumber
-	span _ aNumber.
+	span := aNumber.
 	self hotspot: self hotspot.
 	self changed.
