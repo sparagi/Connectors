@@ -17,7 +17,8 @@
 		"arrows",
 		"arrowForms",
 		"arrowScales",
-		"arrowJoints"
+		"arrowJoints",
+		"dashedBorderSpec"
 	],
 	"name" : "NCLineMorph",
 	"type" : "normal"
