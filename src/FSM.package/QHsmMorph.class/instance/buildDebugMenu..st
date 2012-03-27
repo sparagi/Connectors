@@ -1,7 +1,7 @@
 debug and other
 buildDebugMenu: aHand
 	| menu |
-	menu _ super buildDebugMenu: aHand.
+	menu := super buildDebugMenu: aHand.
 	menu addLine.
 	menu add: 'browse state handler class' translated target: self eventHandler selector: #browseHierarchy.
 	menu add: 'view state hierarchy' translated target: self selector: #viewStateHierarchy.
