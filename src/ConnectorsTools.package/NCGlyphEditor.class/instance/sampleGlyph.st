@@ -6,7 +6,7 @@ sampleGlyph
 	newContours := glyph contoursShiftedToStartWith: joinPoint.
 	rot := endPoint ifNil: [ rotation ]
 		ifNotNil: [ ((endPoint- joinPoint) theta radiansToDegrees) - 90.0 ].
-	rTransform := glyph transformForRect: (-0.5@-0.5 corner: (0.5@0.5)) rotation: rot.
+	rTransform := glyph transformForRect: (-0.5@ -0.5 corner: (0.5@0.5)) rotation: rot.
 	ref := rTransform transformPoint: joinPoint.
 	endRef := rTransform transformPoint: (endPoint ifNil: [ joinPoint ]).
 	newContours := newContours collect: [ :c |
