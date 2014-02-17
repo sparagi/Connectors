@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "TextMorphEditor",
+	"super" : "SmalltalkEditor",
 	"category" : "Connectors-Text-Base",
 	"classinstvars" : [ ],
 	"pools" : [ ],
