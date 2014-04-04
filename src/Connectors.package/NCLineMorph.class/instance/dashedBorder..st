@@ -1,5 +1,3 @@
-accessing
-dashedBorder: aDashedBorderSpec
-
-	dashedBorderSpec := aDashedBorderSpec.
-	self changed.
+TODO
+dashedBorder: dashSpec 
+	^ self setProperty: #borderDashSpec toValue: dashSpec

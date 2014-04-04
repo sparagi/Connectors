@@ -1,1 +1,1 @@
-This is the Anti-Aliased ConnectorMorph, part of Connectors2.
+self new openInHand

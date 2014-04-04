@@ -1,3 +1,3 @@
-accessing
+TODO
 dashedBorder
-	^ dashedBorderSpec
+^ self valueOfProperty:  #borderDashSpec
