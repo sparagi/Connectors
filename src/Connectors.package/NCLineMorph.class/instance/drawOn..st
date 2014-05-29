@@ -1,7 +1,6 @@
 drawing
 drawOn: aCanvas 
 	| aaCanvas isShadow |
-	"(self hasProperty: #borderDashSpec) ifTrue: [	^ self drawDashedBorderOn: aCanvas ]."
 	aaCanvas := aCanvas asBalloonCanvas.
 	isShadow := aCanvas isShadowDrawing.
 	(aaCanvas isBalloonCanvas or: [ aaCanvas isPostscriptCanvas ])
