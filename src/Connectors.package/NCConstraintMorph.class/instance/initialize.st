@@ -1,7 +1,7 @@
 initialization
 initialize
 	super initialize.
-	inputs := EmptyArray.
+	inputs := Array empty.
 	dieWithInput := false.
 	self lastTargetPoint: 0@0.
 	self
