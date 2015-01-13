@@ -2,15 +2,15 @@ menus
 addSelectedMorph: anEvent
 	"Allow the user to select a new submorph and add it to me"
 	| hand handle |
-	hand := anEvent hand.
-	handle := NewHandleMorph new 
+	hand _ anEvent hand.
+	handle _ NewHandleMorph new 
 		followHand: hand
 		forEachPointDo: [ :newPoint |  ]
 		lastPointDo: [ :newPoint | | targets choice |
-			targets := (self world morphsAt: newPoint) copyWithoutAll: { self . handle }.
-			targets := targets reject: [ :ea | ea isPlayfieldLike ].
+			targets _ (self world morphsAt: newPoint) copyWithoutAll: { self . handle }.
+			targets _ targets reject: [ :ea | ea isPlayfieldLike ].
 			targets isEmpty
-				ifFalse: [ "choice := targets size = 1
+				ifFalse: [ "choice _ targets size = 1
 					ifTrue: [ 1 ]
 					ifFalse: [ (PopUpMenu labelArray: (targets collect: [ :ea | ea name ]))
 							startUpWithCaption: 'Select Morph' ].

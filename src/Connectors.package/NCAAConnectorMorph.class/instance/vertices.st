@@ -1,3 +1,0 @@
-accessing
-vertices
-	^line vertices

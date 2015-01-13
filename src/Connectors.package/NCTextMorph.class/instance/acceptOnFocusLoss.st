@@ -1,3 +1,3 @@
 accessing
 acceptOnFocusLoss
-	^acceptOnFocusLoss ifNil: [ acceptOnFocusLoss := false ]
+	^acceptOnFocusLoss ifNil: [ acceptOnFocusLoss _ false ]

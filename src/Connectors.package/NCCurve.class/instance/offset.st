@@ -1,3 +1,3 @@
 accessing
 offset
-	^offset ifNil: [ offset := 0.0 @ 0.0]
+	^offset ifNil: [ offset _ 0.0 @ 0.0]

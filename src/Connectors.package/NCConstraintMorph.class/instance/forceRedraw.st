@@ -3,4 +3,4 @@ forceRedraw
 
 	self changed "; layoutChanged".
 	self lastTargetPoint: nil.
-	lastTargetBounds := nil.
+	lastTargetBounds _ nil.

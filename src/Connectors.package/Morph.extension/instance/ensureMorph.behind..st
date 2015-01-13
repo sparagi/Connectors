@@ -4,16 +4,16 @@ ensureMorph: back behind: front
 	but only if it isn't already behind.
 	Assume that it is more common for newMorph to already be in front"
 	| backIndex i |
-	backIndex := 0.
-	i := submorphs size.
+	backIndex _ 0.
+	i _ submorphs size.
 	"back to front search"
 	submorphs reverseDo: [ :ea |
 		ea == back
-			ifTrue: [ backIndex := i ].
+			ifTrue: [ backIndex _ i ].
 		ea == front
 			ifTrue: [ backIndex = 0
 				ifFalse: [ ^self "already in front" ]
 				ifTrue: [ ^self privateAddMorph: back atIndex: i + 1  ]
 			].
-		i := i - 1.
+		i _ i - 1.
  	].

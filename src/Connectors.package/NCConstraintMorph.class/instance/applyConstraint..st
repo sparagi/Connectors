@@ -5,4 +5,4 @@ applyConstraint: aPoint
 			ifTrue: [ owner center: (self point: aPoint in: self pasteUpMorphOrWorld) ]
 			ifFalse: [ self center: aPoint ]
 	].
-	lastTargetBounds := nil.
+	lastTargetBounds _ nil.

@@ -1,3 +1,0 @@
-connectors-queries
-constraints
-	^constraints

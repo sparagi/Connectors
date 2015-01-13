@@ -1,3 +1,3 @@
-accessing
+TODO
 dashedBorder
-	^ dashedBorderSpec
+	^{ 3. 3. Color red }

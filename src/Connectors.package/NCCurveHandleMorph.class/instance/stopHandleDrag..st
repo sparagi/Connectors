@@ -1,5 +1,5 @@
 event handling
 stopHandleDrag: evt
-	dragStartPoint := desiredPoint := nil.
+	dragStartPoint _ desiredPoint _ nil.
 	evt hand releaseMouseFocus: self.
 	self triggerEvent: #dragStop.

@@ -2,7 +2,7 @@ constraints
 addShape: aMorph
 	| newMorph |
 	aMorph ifNil: [ ^self ].
-	newMorph := super addShape: aMorph.
+	newMorph _ super addShape: aMorph.
 	newMorph endShapeWidth: owner lineWidth.
 	newMorph heading: self heading.
 	newMorph referencePosition: self lastTargetPoint.

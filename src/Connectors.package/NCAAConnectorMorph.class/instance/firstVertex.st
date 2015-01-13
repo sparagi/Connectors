@@ -1,3 +1,0 @@
-accessing
-firstVertex
-	^line firstVertex

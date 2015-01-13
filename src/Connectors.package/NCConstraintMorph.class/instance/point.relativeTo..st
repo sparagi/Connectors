@@ -1,7 +1,7 @@
 connection-callbacks
 point: aPoint relativeTo: morph
 	| world mtfm ctfm |
-	world := self world.
-	ctfm := self transformFrom: world.
-	mtfm := morph transformFrom: world.
+	world _ self world.
+	ctfm _ self transformFrom: world.
+	mtfm _ morph transformFrom: world.
 	^mtfm globalPointToLocal: (ctfm localPointToGlobal: aPoint)

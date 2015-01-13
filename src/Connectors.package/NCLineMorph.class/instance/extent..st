@@ -4,7 +4,7 @@ extent: newExtent
 	shrink things too small."
 	| safeExtent center |
 	self changed.
-	center := self referencePosition.
-	safeExtent := newExtent max: 20@20.
+	center _ self referencePosition.
+	safeExtent _ newExtent max: 20@20.
 	self setVertices: (vertices collect:
 		[:p | p - center * (safeExtent asFloatPoint / (bounds extent max: 1@1)) + center])

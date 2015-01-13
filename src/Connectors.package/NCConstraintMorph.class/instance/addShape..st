@@ -2,7 +2,7 @@ constraints
 addShape: aMorph
 	| newMorph |
 	aMorph ifNil: [ ^self ].
-	newMorph := aMorph duplicate center: self center.
+	newMorph _ aMorph duplicate center: self center.
 	newMorph endShapeColor: self endShapeColor.
 	newMorph endShapeBorderColor: self endShapeBorderColor.
 	self addMorphFront: newMorph.

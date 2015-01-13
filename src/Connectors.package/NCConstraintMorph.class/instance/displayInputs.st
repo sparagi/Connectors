@@ -1,5 +1,5 @@
 menus
 displayInputs
 	| highlights |
-	highlights := self highlightInputs.
+	highlights _ self highlightInputs.
 	self addAlarm: #deleteMorphs: with: highlights after: 2000

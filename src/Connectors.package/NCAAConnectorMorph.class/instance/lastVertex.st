@@ -1,3 +1,0 @@
-accessing
-lastVertex
-	^line lastVertex

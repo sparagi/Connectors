@@ -1,3 +1,0 @@
-defaults
-defaultLineEndConstraintClass
-	^NCLineEndConstraintMorph

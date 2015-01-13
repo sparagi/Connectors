@@ -1,4 +1,4 @@
 class initialization
 initialize
 	"NCLineMorph initialize"
-	CurveDebug ifNil: [ CurveDebug := false ]
+	CurveDebug ifNil: [ CurveDebug _ false ]

@@ -5,6 +5,6 @@ deleteSelectedMorph: anEvent
 	submorphs isEmpty ifTrue: [ ^self ].
 	submorphs size = 1 ifTrue: [ ^self deleteShape: submorphs first ].
 
-	choice := (PopUpMenu labelArray: (submorphs collect: [ :ea | ea externalName ]))
+	choice _ (PopUpMenu labelArray: (submorphs collect: [ :ea | ea externalName ]))
 							startUpWithCaption: 'Select Morph'.
 	choice > 0 ifTrue: [ self deleteShape: (submorphs at: choice) ].

@@ -2,11 +2,11 @@
 intersectionsWithLineFrom: e1 to: e2
 	"Answer the set of intersections, if any"
 	| retval l i |
-	retval := OrderedCollection new: 2.
-	l := LineSegment from: e1 to: e2.
+	retval _ OrderedCollection new: 2.
+	l _ LineSegment from: e1 to: e2.
 	self lineSegmentsDo: [ :p1 :p2 | | s |
-		s := LineSegment from: p1 to: p2.
-		i := s intersectionWith: l.
+		s _ LineSegment from: p1 to: p2.
+		i _ s intersectionWith: l.
 		i ifNotNil: [ retval add: i ].
 		retval size = 2 ifTrue: [ ^retval asArray ].
 	].

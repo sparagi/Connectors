@@ -9,14 +9,14 @@ depthFirstSearchVisitNodeBlock: nodeBlock edgeBlock: edgeBlock states: nodeState
 	"
 
 	| state |
-	state := nodeStates at: self ifAbsentPut: [ #unexplored ].
+	state _ nodeStates at: self ifAbsentPut: [ #unexplored ].
 	postOrder ifFalse: [ nodeBlock value: self ].
 	nodeStates at: self put: #frontier.
 	self outgoingConnections do: [:conn | 
 		| neighbor | 
-		neighbor := conn destinationMorph.
+		neighbor _ conn destinationMorph.
 		neighbor ifNotNil: [
-			state := (nodeStates at: neighbor ifAbsentPut: [ #unexplored ]).
+			state _ (nodeStates at: neighbor ifAbsentPut: [ #unexplored ]).
 			edgeBlock value: conn value: state.
 			state == #unexplored
 				ifTrue: [neighbor

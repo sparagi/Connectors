@@ -1,11 +1,11 @@
 constraints
 targetPoint
 	| pt input isMorph |
-	input := self input.
+	input _ self input.
 	(constraint isNil or: [input isNil]) 
 		ifTrue: [^self defaultTargetPoint].
 
-	(isMorph := input isMorph) ifTrue: [ | inputBounds |
+	(isMorph _ input isMorph) ifTrue: [ | inputBounds |
 		inputBounds := input boundsInWorld.
 		lastTargetBounds = inputBounds ifTrue: [ ^self lastTargetPoint ].
 		lastTargetBounds := inputBounds.
@@ -15,7 +15,7 @@ targetPoint
 	pt := constraint valueWithEnoughArguments: { input }.
 
 	"transform point"
-	pt := (isMorph 
+	pt _ (isMorph 
 		ifTrue: [self globalPointToLocal: (input localPointToGlobal: pt)]
 		ifFalse: [self globalPointToLocal: pt]) asIntegerPoint.
 

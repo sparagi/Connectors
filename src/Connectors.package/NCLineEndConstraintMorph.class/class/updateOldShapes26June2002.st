@@ -5,7 +5,7 @@ updateOldShapes26June2002
 	self allSubInstancesDo: [ :lec |
 		lec submorphsDo: [ :att | 
 			(att isKindOf: PolygonMorph) ifTrue: [ | new |
-				new := att knownName caseOf: {
+				new _ att knownName caseOf: {
 				[ 'closed arrowhead' ] -> [ #closedArrowheadShape ].
 				[ 'crows foot' ] -> [ #crowsFootShape ].
 				[ 'double arrowhead' ] -> [ #doubleArrowheadShape ].
@@ -16,7 +16,7 @@ updateOldShapes26June2002
 				[ 'open arrowhead' ] -> [ #openArrowheadShape ].
 				} otherwise: [ nil ].
 				new ifNotNil: [ | newEnd |
-					newEnd := self perform: new.
+					newEnd _ self perform: new.
 					lec deleteShape: att.
 					lec addShape: newEnd.
 				]

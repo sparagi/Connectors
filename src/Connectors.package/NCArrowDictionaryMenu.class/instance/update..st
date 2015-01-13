@@ -5,10 +5,10 @@ update: anAspect
 	super update: anAspect.
 	(anAspect == #arrowsChanged) ifFalse: [ ^self ].
 	self updateFromGlyphDictionary.
-	currentIndex := entryNames indexOf: currentName ifAbsent: [ 1].
+	currentIndex _ entryNames indexOf: currentName ifAbsent: [ 1].
 	self valueOfProperty: #oldGlyphKeys ifPresentDo: [ :oldKeys |
 		newKeys := entryNames difference: oldKeys.
 		self removeProperty: #oldGlyphKeys.
 		newKeys isEmpty ifTrue: [ ^self ].
-		currentIndex := entryNames indexOf: newKeys first.
+		currentIndex _ entryNames indexOf: newKeys first.
 		self updateThumbnail].

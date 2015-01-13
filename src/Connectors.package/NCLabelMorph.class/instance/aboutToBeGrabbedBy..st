@@ -2,7 +2,7 @@ dropping/grabbing
 aboutToBeGrabbedBy: aHand 
 	| oldFocus |
 	"label isLocked
-		ifFalse: [oldFocus := aHand keyboardFocus.
+		ifFalse: [oldFocus _ aHand keyboardFocus.
 			(oldFocus respondsTo: #passKeyboardFocusTo:)
 				ifTrue: [oldFocus passKeyboardFocusTo: label]
 				ifFalse: [aHand newKeyboardFocus: self label]]."

@@ -1,0 +1,3 @@
+*connectors-menu
+arrows
+	^arrows

@@ -1,5 +1,5 @@
 constraints
 input: aMorph
 	super input: aMorph.
-	offset := 0@0.
+	offset _ 0@0.
 	self fixMorphicLayer

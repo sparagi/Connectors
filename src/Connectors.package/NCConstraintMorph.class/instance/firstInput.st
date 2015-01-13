@@ -1,5 +1,5 @@
 constraints
 firstInput
 	| ips |
-	ips := self inputs.
+	ips _ self inputs.
 	^ips isEmpty ifTrue: [ ] ifFalse: [ ips first ] 

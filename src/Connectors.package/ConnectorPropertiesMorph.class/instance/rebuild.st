@@ -2,14 +2,14 @@ as yet unclassified
 rebuild
 
 	| buttonColor menu |
-	buttonColor := color lighter.
+	buttonColor _ color lighter.
 	
 	self removeAllMorphs.
 	self addAColumn: {
 		self lockedString: ('Connector Properties for {1}' translated format:{myTarget name}).
 	}.
 	
-	menu := MenuMorph new defaultTarget: myTarget.
+	menu _ MenuMorph new defaultTarget: myTarget.
 	myTarget addYellowButtonMenuItemsTo: menu event: ActiveHand lastEvent.
 
 	self addARow: { self inAColumn: (menu  submorphs collect: [ :item | item duplicateMorph: ActiveHand lastEvent ]) }.

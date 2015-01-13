@@ -2,7 +2,7 @@ initialization
 string: aString fontName: aName size: aSize wrap: shouldWrap minWidth: chars
 
 	label ifNotNil: [ label delete minWidth ].
-	label := shouldWrap
+	label _ shouldWrap
 		ifTrue: [ self class textClass new contentsWrapped: aString ]
 		ifFalse: [ self class textClass new contentsAsIs: aString ].
 	label fontName: aName size: aSize.

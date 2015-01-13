@@ -1,4 +1,4 @@
 initialization
 initialize
 	super initialize.
-	offset := 0@0.
+	offset _ 0@0.

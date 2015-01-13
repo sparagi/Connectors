@@ -2,18 +2,18 @@ menus
 attachToSelectedMorph: anEvent
 	"Allow the user to select a new input"
 	| handle targets highlights |
-	highlights := self highlightInputs.
-	handle := NewHandleMorph new 
+	highlights _ self highlightInputs.
+	handle _ NewHandleMorph new 
 		followHand: anEvent hand
 		forEachPointDo: [ :newPoint |  ]
 		lastPointDo: [ :newPoint | | localPoint choice |
-			localPoint := self globalPointToLocal: newPoint.
+			localPoint _ self globalPointToLocal: newPoint.
 			highlights do: [ :ea | ea  delete ].
-			targets := self connectionTargetsAt: localPoint.
-			targets := targets copyWithout: handle.
+			targets _ self connectionTargetsAt: localPoint.
+			targets _ targets copyWithout: handle.
 			targets isEmpty
 				ifTrue: [ self connectToAbsolutePoint: localPoint ]
-				ifFalse: [ choice := targets size = 1
+				ifFalse: [ choice _ targets size = 1
 					ifTrue: [ 1 ]
 					ifFalse: [ (PopUpMenu labelArray: (targets collect: [ :ea | ea name ]))
 							startUpWithCaption: 'Select Morph' ].

@@ -1,3 +1,3 @@
 debugging
 curveDebug
-	^CurveDebug ifNil: [ CurveDebug := false ].
+	^CurveDebug ifNil: [ CurveDebug _ false ].

@@ -1,3 +1,0 @@
-menus
-hasYellowButtonMenu	
-	^true

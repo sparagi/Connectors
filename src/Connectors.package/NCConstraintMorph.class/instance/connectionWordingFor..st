@@ -2,7 +2,7 @@ menus
 connectionWordingFor: sel
 	"sel is the desired menu choice"
 	| str selector |
-	selector := self preferredConnection ifNotNilDo: [ :pc | pc first ].
+	selector _ self preferredConnection ifNotNilDo: [ :pc | pc first ].
 
 	(sel == #connectToNothing) ifTrue: [
 		^(selector == #connectToNothing)
@@ -16,6 +16,6 @@ connectionWordingFor: sel
 			ifNotNil: [ '<no>', 'no connection preference' translated ]
 	].
 
-	str := (sel = selector) ifTrue: [ '<yes>' ] ifFalse: [ '<no>' ].
-	str := str, (sel splitOnCapBoundaries) translated.
+	str _ (sel = selector) ifTrue: [ '<yes>' ] ifFalse: [ '<no>' ].
+	str _ str, (sel splitOnCapBoundaries) translated.
 	^str

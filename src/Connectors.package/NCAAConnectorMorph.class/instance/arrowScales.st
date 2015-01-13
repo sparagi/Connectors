@@ -1,3 +1,0 @@
-arrows
-arrowScales
-	^line arrowScales

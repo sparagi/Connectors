@@ -3,7 +3,7 @@ vertexWithinProportion: proportion andDistance: dist
 	"Answer which vertex is within proportion of the current segment (0..1), if any, and also within dist pixels.
 	Answer 0 if none."
 	| seg |
-	seg := line segments at: segmentIndex ifAbsent: [ ^0 ].
+	seg _ line segments at: segmentIndex ifAbsent: [ ^0 ].
 	line isCurve ifTrue: [
 		seg isBezier2Segment ifFalse: [ ^0 ].
 		^(((minT - 0.5) abs <= proportion) and: [ minDist <= dist ])

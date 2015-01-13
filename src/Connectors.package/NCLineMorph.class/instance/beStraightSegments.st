@@ -2,5 +2,5 @@ accessing
 beStraightSegments
 
 	self isCurve ifTrue: [
-		smoothCurve := false.
+		smoothCurve _ false.
 		self computeBounds]

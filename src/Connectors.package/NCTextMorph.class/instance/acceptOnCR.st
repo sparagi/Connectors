@@ -1,3 +1,3 @@
 accessing
 acceptOnCR
-	^acceptOnCR ifNil: [ acceptOnCR := false ]. 
+	^acceptOnCR ifNil: [ acceptOnCR _ false ]. 

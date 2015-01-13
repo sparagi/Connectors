@@ -1,4 +1,4 @@
 stepping and presenter
 stepTime: mSecsPerStep
 
-	stepTime := mSecsPerStep truncated.
+	stepTime _ mSecsPerStep truncated.

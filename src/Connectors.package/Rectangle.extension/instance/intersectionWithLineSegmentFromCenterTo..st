@@ -9,10 +9,10 @@ intersectionWithLineSegmentFromCenterTo: aPoint
 	(self containsPoint: aPoint)
 		ifTrue: [^ aPoint].
 	"Answer the set of intersections, if any"
-	seg := LineSegment from: self center to: aPoint.
+	seg _ LineSegment from: self center to: aPoint.
 	self lineSegmentsDo: [ :p1 :p2 | | side int |
-		side := LineSegment from: p1 to: p2.
-		int := side intersectionWith: seg.
+		side _ LineSegment from: p1 to: p2.
+		int _ side intersectionWith: seg.
 		int ifNotNil: [ ^int ].
 	].
 

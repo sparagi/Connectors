@@ -1,3 +1,3 @@
 stepping and presenter
 setOffset
-	offset := self center - self target
+	offset _ self center - self target

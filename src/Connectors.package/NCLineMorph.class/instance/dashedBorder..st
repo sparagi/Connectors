@@ -1,5 +1,2 @@
-accessing
-dashedBorder: aDashedBorderSpec
-
-	dashedBorderSpec := aDashedBorderSpec.
-	self changed.
+TODO
+dashedBorder: ignored

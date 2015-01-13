@@ -1,3 +1,3 @@
 accessing
 lastTargetPoint: aPoint
-	lastTarget := aPoint.
+	lastTarget _ aPoint.

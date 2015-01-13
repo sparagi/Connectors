@@ -1,5 +1,5 @@
 geometry testing
 closestPointTo: aPoint
 	| curveInfo |
-	curveInfo := self curveInfoNearest: aPoint.
+	curveInfo _ self curveInfoNearest: aPoint.
 	^curveInfo closestPoint.

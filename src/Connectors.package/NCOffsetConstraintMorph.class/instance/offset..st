@@ -1,3 +1,3 @@
 accessing
 offset: aPoint
-	offset := aPoint.
+	offset _ aPoint.

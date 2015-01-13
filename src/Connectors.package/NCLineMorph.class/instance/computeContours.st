@@ -21,5 +21,5 @@ computeContours
 	(contours at: 1)
 		at: 1 put: (contours fourth at: arrows first joinIndex);
 		at: csize put: contours second first.
-	contours := contours collect: [ :ctr | ctr collect: [ :pt | pt roundTo: 0.001 ]].
+	contours _ contours collect: [ :ctr | ctr collect: [ :pt | pt roundTo: 0.001 ]].
 	^contours

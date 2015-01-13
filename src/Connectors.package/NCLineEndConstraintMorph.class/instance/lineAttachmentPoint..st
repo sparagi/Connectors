@@ -1,3 +1,3 @@
 accessing
 lineAttachmentPoint: aPointOrNil
-	lineAttachmentPoint := aPointOrNil
+	lineAttachmentPoint _ aPointOrNil

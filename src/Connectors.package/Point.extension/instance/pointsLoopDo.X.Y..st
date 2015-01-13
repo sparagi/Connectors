@@ -7,30 +7,30 @@ pointsLoopDo: aBlock X: xDelta Y: yDelta
 	first and last points, so that these can be called for as needed in client 
 	code. "
 	| dx dy px py P destX destY |
-	dx := xDelta sign.
-	dy := yDelta sign.
-	px := yDelta abs.
-	py := xDelta abs.
-	destX := self x.
-	destY := self y.
+	dx _ xDelta sign.
+	dy _ yDelta sign.
+	px _ yDelta abs.
+	py _ xDelta abs.
+	destX _ self x.
+	destY _ self y.
 	py > px
 		ifTrue: ["more horizontal"
-			P := py // 2.
+			P _ py // 2.
 			1
 				to: py
 				do: [:i | 
-					destX := destX + dx.
-					(P := P - px) < 0
-						ifTrue: [destY := destY + dy.
-							P := P + py].
+					destX _ destX + dx.
+					(P _ P - px) < 0
+						ifTrue: [destY _ destY + dy.
+							P _ P + py].
 					aBlock value: destX @ destY]]
 		ifFalse: ["more vertical"
-			P := px // 2.
+			P _ px // 2.
 			1
 				to: px
 				do: [:i | 
-					destY := destY + dy.
-					(P := P - py) < 0
-						ifTrue: [destX := destX + dx.
-							P := P + px].
+					destY _ destY + dy.
+					(P _ P - py) < 0
+						ifTrue: [destX _ destX + dx.
+							P _ P + px].
 					aBlock value: destX @ destY]]

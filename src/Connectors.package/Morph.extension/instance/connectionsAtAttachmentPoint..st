@@ -2,7 +2,7 @@
 connectionsAtAttachmentPoint: aPoint
 	"Answer a collection of all the connections to the given point (if any)"
 	| retval |
-	retval := Array streamContents: [ :s |
+	retval _ Array streamContents: [ :s |
 		self connections do: [ :connection |
 			connection constraints do: [ :constraint |
 				(constraint notNil and: [

@@ -1,3 +1,0 @@
-geometry
-midpoint
-	^line midpoint

@@ -8,7 +8,7 @@ depthFirstSearchVisitPre: nodeBlock post: postNodeBlock edgeBlock: edgeBlock sta
 	If postNodeBlock is non-nil, it will be called after visiting a node. 
 	"
 	| state |
-	state := nodeStates
+	state _ nodeStates
 				at: self
 				ifAbsentPut: [#unexplored].
 	nodeBlock
@@ -17,9 +17,9 @@ depthFirstSearchVisitPre: nodeBlock post: postNodeBlock edgeBlock: edgeBlock sta
 	self outgoingConnections
 		do: [:conn | 
 			| neighbor | 
-			neighbor := conn destinationMorph.
+			neighbor _ conn destinationMorph.
 			neighbor
-				ifNotNil: [state := nodeStates
+				ifNotNil: [state _ nodeStates
 								at: neighbor
 								ifAbsentPut: [#unexplored].
 					edgeBlock

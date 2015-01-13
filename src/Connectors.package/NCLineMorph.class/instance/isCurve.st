@@ -1,3 +1,3 @@
 accessing
 isCurve
-	^smoothCurve ifNil: [ smoothCurve := false ]
+	^smoothCurve ifNil: [ smoothCurve _ false ]
