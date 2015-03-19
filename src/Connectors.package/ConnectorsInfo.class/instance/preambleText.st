@@ -6,10 +6,10 @@ preambleText
 "Convert old instances if necessary."
 (Smalltalk hasClassNamed: ''NCConstraintMorph'') ifTrue: [
 	| i1 i2 |
-	i1 _ NCConstraintMorph allInstVarNames indexOf: ''targetBlock''.
+	i1 := NCConstraintMorph allInstVarNames indexOf: ''targetBlock''.
 	i1 > 0 ifTrue: [
 	NCConstraintMorph addInstVarName: ''constraint''.
-	i2 _ NCConstraintMorph allInstVarNames indexOf: ''constraint''.
+	i2 := NCConstraintMorph allInstVarNames indexOf: ''constraint''.
 	NCConstraintMorph allSubInstances do: [ :ea | ea instVarAt: i2 put: (ea instVarAt: i1) ].
 	]
 ].

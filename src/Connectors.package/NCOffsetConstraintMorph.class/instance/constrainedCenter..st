@@ -3,11 +3,11 @@ constrainedCenter: aPoint
 	"Make sure that I stay within my owner's bounds. Answer a new center position"
 
 	| newCenter newBounds myPU |
-	myPU _ self pasteUpMorph.
-	newCenter _ aPoint + offset.
+	myPU := self pasteUpMorph.
+	newCenter := aPoint + offset.
 	self isFlexed ifFalse: [
-	newBounds _ bounds translateBy: newCenter - self center.
+	newBounds := bounds translateBy: newCenter - self center.
 	myPU
-		ifNotNil: [ newCenter _ newCenter + (newBounds amountToTranslateWithin: myPU bounds)].
+		ifNotNil: [ newCenter := newCenter + (newBounds amountToTranslateWithin: myPU bounds)].
 	].
 	^newCenter

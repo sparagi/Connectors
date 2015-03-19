@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "NCAAConnectorMorph",
+	"category" : "Connectors-Base",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "NCSchematicConnectorMorph",
+	"type" : "normal"
+}

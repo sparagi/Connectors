@@ -5,8 +5,8 @@ anchorPreferredConnection: sel to: target at: aPoint
 
 	| relPoint pref |
 
-	relPoint _ aPoint - (self globalPointToLocal: (target localPointToGlobal: (target topLeft))).
+	relPoint := aPoint - (self globalPointToLocal: (target localPointToGlobal: (target topLeft))).
 	self input: target.
-	self preferredConnection: (pref _ { sel . relPoint }).
+	self preferredConnection: (pref := { sel . relPoint }).
 	self perform: sel with: relPoint.
 	^pref

@@ -1,3 +1,3 @@
 constraints
 constrained: anObject
-	constrained _ anObject
+	constrained := anObject

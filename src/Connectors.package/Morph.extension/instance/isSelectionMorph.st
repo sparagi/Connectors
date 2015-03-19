@@ -1,3 +1,0 @@
-*connectors-testing
-isSelectionMorph
-	^false

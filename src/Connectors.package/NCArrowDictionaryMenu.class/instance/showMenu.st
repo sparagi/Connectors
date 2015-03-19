@@ -3,7 +3,7 @@ showMenu
 	"Show the receiver's menu"
 
 	| aMenu |
-	aMenu _ MenuMorph new defaultTarget: self.
+	aMenu := MenuMorph new defaultTarget: self.
 	aMenu addTranslatedList: #(
 		('remove'			removeEntry			'Remove this arrow from the dictionary')
 		('rename'			renameEntry			'Rename this arrow')

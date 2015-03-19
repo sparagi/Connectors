@@ -7,4 +7,4 @@ veryDeepInner: aDeepCopier
 	lastTarget := nil.
 	lastTargetBounds := nil.
 	stepTime := stepTime.
-	dieWithInput _ dieWithInput.
+	dieWithInput := dieWithInput.

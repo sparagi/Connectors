@@ -1,5 +1,5 @@
 editing
 removeHandles
 	| handles |
-	handles _ submorphs select: [ :ea | ea isCurveHandle ].
+	handles := submorphs select: [ :ea | ea isCurveHandle ].
 	self deleteMorphs: handles.

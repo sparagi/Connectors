@@ -4,7 +4,7 @@ scaleToNoGreaterThan: anotherPoint
 	| ratio |
 	x isZero ifTrue: [ ^0 @ anotherPoint y ].
 	y isZero ifTrue: [ ^anotherPoint x @ 0 ].
-	ratio _ anotherPoint / self.
+	ratio := anotherPoint / self.
 	^ratio x > ratio y
 		ifTrue: [ self * ratio y ]
 		ifFalse: [ self * ratio x ].

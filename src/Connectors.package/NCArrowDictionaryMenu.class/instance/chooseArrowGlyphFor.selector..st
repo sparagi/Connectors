@@ -4,11 +4,11 @@ chooseArrowGlyphFor: client selector: sel
 	self glyphDictionary addDependent: self.
 	entryNames := #().
 	currentIndex := 0.
-	formDict _ self buildFormDict.
+	formDict := self buildFormDict.
 	super initializeFor: nil fromDictionary: formDict.
-	target _ client.
+	target := client.
 	self selector: sel.
-	bb _ SimpleButtonMorph new target: self;
+	bb := SimpleButtonMorph new target: self;
 				 borderColor: Color black.
 	self addMorph: (bb label: 'OK' translated;
 			 actionSelector: #okay)

@@ -1,7 +1,7 @@
 *connectors-fonts-override
 presentMvcFontConfigurationMenu
 	| aMenu result |
-	aMenu _ CustomMenu new.
+	aMenu := CustomMenu new.
 	aMenu title: 'Standard System Fonts'.
 	aMenu add: 'default text font...' translated action: #chooseSystemFont.
 	aMenu add: 'list font...' translated action: #chooseListFont.
@@ -14,5 +14,5 @@ presentMvcFontConfigurationMenu
 	aMenu addLine.
 	aMenu add: 'restore default font choices' action: #restoreDefaultFonts.
 
-	(result _ aMenu startUp) ifNotNil:
+	(result := aMenu startUp) ifNotNil:
 		[self perform: result]

@@ -1,13 +1,13 @@
 drawing
 highlightInputs
 	| highlights |
-	highlights _ self inputs collect: [ :ea |
+	highlights := self inputs collect: [ :ea |
 		(Morph new)
 			bounds: ea fullBounds;
 			color: ((Color red) alpha: 0.3);
 			lock
 	].
-	highlights _ OrderedCollection withAll: highlights.
+	highlights := OrderedCollection withAll: highlights.
 	highlights add: ( (EllipseMorph new)
 			extent: 12@12;
 			center: (self point: self targetPoint in: self pasteUpMorph);

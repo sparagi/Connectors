@@ -1,5 +1,5 @@
 accessing
 toggleSmoothing
 
-	smoothCurve _ smoothCurve not.
+	smoothCurve := smoothCurve not.
 	self computeBounds

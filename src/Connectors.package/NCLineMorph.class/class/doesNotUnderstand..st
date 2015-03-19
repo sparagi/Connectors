@@ -1,11 +1,11 @@
 error handling
 doesNotUnderstand: aMessage
 	"| failed |
-	failed _ false.
+	failed := false.
 	(PolygonMorph class includesSelector: aMessage selector) ifTrue: [
 		[ self class compile: (PolygonMorph class sourceCodeAt: aMessage selector)
 			classified: 'stolen from PM'
-			notifying: nil ] on: Error do: [ :ex | failed _ true ].
+			notifying: nil ] on: Error do: [ :ex | failed := true ].
 	].
 	^failed
 		ifFalse: [ aMessage sentTo: self ]

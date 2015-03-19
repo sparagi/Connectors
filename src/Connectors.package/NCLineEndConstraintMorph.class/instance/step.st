@@ -3,7 +3,7 @@ step
 	"Modified version of super method that assumes a single input"
 	| myInput newTarget |
 
-	myInput _ inputs at: 1 ifAbsent: [].
+	myInput := inputs at: 1 ifAbsent: [].
 	myInput ifNil: [
 		constraint ifNotNil: [ constraint := nil. self changed].
 			self dieWithInput ifTrue: [ self delete ].

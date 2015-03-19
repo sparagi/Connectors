@@ -1,4 +1,4 @@
 initialization
 initialize
 	super initialize.
-	lineAttachmentPoint _ 0@0.
+	lineAttachmentPoint := 0@0.

@@ -1,8 +1,8 @@
 *connectors-converting
 splitOnCapBoundaries
 	| stream prev |
-	stream _ WriteStream on: (self species new: self size * 2).
-	prev _ self at: 1.
+	stream := WriteStream on: (self species new: self size * 2).
+	prev := self at: 1.
 	self do: [ :c |
 		(c = $:)
 			ifTrue: [ stream nextPutAll: '...' ]
@@ -11,6 +11,6 @@ splitOnCapBoundaries
 					ifTrue: [ stream space; nextPut: c asLowercase ]
 					ifFalse: [ stream nextPut: c ].
 			].
-		prev _ c.
+		prev := c.
 	].
 	^stream contents

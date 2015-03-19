@@ -5,13 +5,13 @@ attachUnobnoxiouslyTo: aMorph at: aPoint
 	self offset: 0@0.
 	self center: aPoint.
 	self attachTo: aMorph at: aPoint.	"sets constraint block"
-	incr _ 0@1.
-	limit _ 2000.
-	newBounds _ self bounds.
+	incr := 0@1.
+	limit := 2000.
+	newBounds := self bounds.
 	[ limit < 0 or: [ incr isZero ] ] whileFalse: [
-		incr _ aMorph nudgeForLabel: newBounds.
-		limit _ limit - 1.
-		newBounds _ newBounds translateBy: incr.
+		incr := aMorph nudgeForLabel: newBounds.
+		limit := limit - 1.
+		newBounds := newBounds translateBy: incr.
 	].
 	self position: newBounds origin.
 	self setOffset.

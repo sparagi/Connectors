@@ -1,6 +1,6 @@
 event handling
 adjustCurve
 	| retval |
-	retval _ setPoint valueWithEnoughArguments: { desiredPoint }.
-	targetPoint _ getPoint value.
+	retval := setPoint valueWithEnoughArguments: { desiredPoint }.
+	targetPoint := getPoint value.
 	^retval

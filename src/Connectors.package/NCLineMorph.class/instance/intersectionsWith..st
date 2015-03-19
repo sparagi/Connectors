@@ -4,7 +4,7 @@ intersectionsWith: aRectangle
 	Ignores arrowForms."
 
 	| retval |
-	retval _ IdentitySet new: 4.
+	retval := IdentitySet new: 4.
 	(self bounds intersects: aRectangle) ifFalse: [^ retval].
 
 	self segmentsDo: [ :seg |

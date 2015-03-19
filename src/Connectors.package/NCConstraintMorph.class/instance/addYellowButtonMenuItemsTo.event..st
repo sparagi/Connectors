@@ -1,7 +1,7 @@
 menus
 addYellowButtonMenuItemsTo: aMenu event: evt
 	| event |
-	event _ (evt isKindOf: UserInputEvent) ifTrue: [ evt ] ifFalse: [ ActiveEvent ].
+	event := (evt isKindOf: UserInputEvent) ifTrue: [ evt ] ifFalse: [ ActiveEvent ].
 	
 	aMenu 
 		defaultTarget: self;

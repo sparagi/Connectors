@@ -4,17 +4,17 @@ alignAttachmentPointsWithGridNear: aPoint
 	| tweak minDist tweaks best aps |
 	aps := self attachmentPoints.
 	aps isEmpty ifTrue: [ ^self position: (self griddedPoint: self position) ].
-	minDist _ 1000.
-	tweak _ 0@0.
-	tweaks _ Bag new.
-	best _ 0@0.
+	minDist := 1000.
+	tweak := 0@0.
+	tweaks := Bag new.
+	best := 0@0.
 	aps do: [ :ap | | dist |
-		dist _ ap dist: (self griddedPoint: ap).
-		tweak _ (self griddedPoint: ap) - ap.
-		dist < minDist ifTrue: [ best _ tweak ].
+		dist := ap dist: (self griddedPoint: ap).
+		tweak := (self griddedPoint: ap) - ap.
+		dist < minDist ifTrue: [ best := tweak ].
 		tweaks add: tweak.
 	].
 	tweaks sortedCounts first key > 1
-		ifTrue: [ tweak _ tweaks sortedCounts first value ]
-		ifFalse: [ tweak _ best ].
+		ifTrue: [ tweak := tweaks sortedCounts first value ]
+		ifFalse: [ tweak := best ].
 	self position: (self position + tweak) asIntegerPoint.

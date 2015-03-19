@@ -1,3 +1,3 @@
 accessing
 lastTargetPoint
-	^lastTarget ifNil: [ lastTarget_ 0@0 ]
+	^lastTarget ifNil: [ lastTarget:= 0@0 ]
