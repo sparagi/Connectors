@@ -15,7 +15,7 @@ initializeWithThumbnail: aThumbnail withLabel: aLabel andColor: aColor andSend: 
 	labeledItem addMorphBack: (TextMorph new backgroundColor: aColor asNontranslucentColor;
 			 contentsAsIs: aLabel;
 			
-			beAllFont: (self class labelTextStyle fontOfSize: 15);
+			beAllFont: (self class labelTextStyle ifNil: [BalloonMorph balloonFont] ifNotNil: [: style | style fontOfSize: 15]);
 			 centered).
 	proto := aReceiver perform: aSelector.
 	proto setNameTo: aLabel.

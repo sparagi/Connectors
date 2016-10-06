@@ -16,7 +16,7 @@ generateThumbnail
 			labeledItem addMorphBack: (TextMorph new backgroundColor: self color asNontranslucentColor;
 					 contentsAsIs: target nameForButton;
 					
-					beAllFont: (self class labelTextStyle fontOfSize: 15);
+					beAllFont: (self class labelTextStyle ifNil: [ BalloonMorph balloonFont ] ifNotNil: [ : style | style fontOfSize: 15]);
 					 centered).
 			self
 				labelGraphic: (labeledItem makerButtonImageOfColor: self color asNontranslucentColor)]
