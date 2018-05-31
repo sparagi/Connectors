@@ -1,3 +1,5 @@
 geometry
 outerBounds
-	^self curveBounds
+	^ vertices
+		ifNil: [super outerBounds]
+		ifNotNil: [self curveBounds]
