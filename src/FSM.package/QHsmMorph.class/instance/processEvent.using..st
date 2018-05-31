@@ -1,7 +1,7 @@
-TODO
+events-processing
 processEvent: anEvent using: defaultDispatcher
 	| retval |
-	retval := true.
+	retval := anEvent.
 	eventHandler ifNil: [ ^super processEvent: anEvent using: defaultDispatcher ].
 	eventHandler processDeferredEvents.
 	((self rejectsEvent: anEvent)
