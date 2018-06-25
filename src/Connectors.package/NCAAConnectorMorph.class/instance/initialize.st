@@ -16,3 +16,4 @@ initialize
 	self addMorphBack: line.
 	self preferredEndConnection: #connectToNearestPointToCenter.
 	self initializeFSM.
+	self borderStyle: BorderStyle simple
